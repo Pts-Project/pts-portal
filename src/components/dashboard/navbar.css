@@ -1,0 +1,15 @@
+.nav-wrapper{
+    font-family: 'Bebas Neue', cursive;    
+    color:black;
+}
+.sidenav{
+    font-family: 'Bebas Neue';
+    color:white;
+}
+
+nav{
+    box-shadow: none;
+}
+.sidenav-trigger{
+    color:white;
+}

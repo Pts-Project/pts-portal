@@ -1,0 +1,77 @@
+.hcontainer{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#particles-js {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+.tophead{
+    color:white;
+}
+
+h1{
+    color:white;
+    font-family: "Bebas Neue";
+    font-size:10rem;
+
+  
+}
+h2{
+    color:white;
+    font-family: "Caveat";
+    font-size:4rem;
+
+   
+}
+
+#overlay {
+    position: relative;
+    padding:100px;
+}
+
+@media(max-width:1024px){
+    h1{
+        color:white;
+        font-family: "Bebas Neue";
+        font-size:10rem;
+    }
+    h2{
+        color:white;
+        font-family: "Caveat";
+        font-size:4rem;
+       
+    }
+    #overlay {
+        position: relative;
+        padding:50px;
+    }
+}
+
+
+@media(max-width:576px){
+    h1{
+        color:white;
+        font-family: "Bebas Neue";
+        font-size:5rem;
+    }
+    h2{
+        color:white;
+        font-family: "Caveat";
+        font-size:3rem;
+       
+    }
+    #overlay {
+        position: relative;
+        padding:50px;
+    }
+}
+
