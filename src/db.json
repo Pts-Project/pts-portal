@@ -1,0 +1,64 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "picture": "../assets/events/img1.png",
+            "eventName": "dance",
+            "regUrl": "www.registerimg1.com"
+        },
+        {
+            "id": 2,
+            "picture": "../assets/events/img2.png",
+            "eventName": "music",
+            "regUrl": "www.registerimg2.com"
+        },
+        {
+            "id": 3,
+            "picture": "../assets/events/img3.png",
+            "eventName": "events",
+            "regUrl": "www.registerimg3.com"
+        },
+        {
+            "id": 4,
+            "picture": "../assets/events/img4.png",
+            "eventName": "dance",
+            "regUrl": "www.registerimg1.com"
+        },
+        {
+            "id": 5,
+            "picture": "../assets/events/img5.jpg",
+            "eventName": "dance",
+            "regUrl": "www.registerimg1.com"
+        },
+        {
+            "id": 6,
+            "picture": "../assets/events/img6.jpg",
+            "eventName": "dance",
+            "regUrl": "www.registerimg1.com"
+        },
+        {
+            "id": 7,
+            "picture": "../assets/events/img7.png",
+            "eventName": "dance",
+            "regUrl": "www.registerimg1.com"
+        },
+        {
+            "id": 8,
+            "picture": "../assets/events/img8.jpg",
+            "eventName": "dance",
+            "regUrl": "www.registerimg1.com"
+        },
+        {
+            "id": 9,
+            "picture": "../assets/events/img9.jpg",
+            "eventName": "dance",
+            "regUrl": "www.registerimg1.com"
+        },
+        {
+            "id": 10,
+            "picture": "../assets/events/img10.jpg",
+            "eventName": "dance",
+            "regUrl": "www.registerimg1.com"
+        }
+    ]
+}
