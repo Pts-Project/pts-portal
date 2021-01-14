@@ -1,48 +1,67 @@
+.main {
+    height: 100%;
+    margin: 0%;
+}
+
+
 .hcontainer{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh
 }
 
 #particles-js {
-    background-color: black;
+    /* background-color: black; */
+    background-image: url(../assets/bg_stars.jpg); 
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
 }
-.tophead{
-    color:white;
-}
+
+
 
 h1{
     color:white;
-    font-family: "Bebas Neue","sans serif";
-    font-size:10rem; 
+    font-family: "Raleway","sans serif";
+    font-size:56px; 
 }
-h2{
+#overlay h2{
     color:white;
     font-family: "Caveat";
-    font-size:4rem;
+    font-size:25px;
+    -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.about p{
+    color: black;
 }
 
 #overlay {
     position: relative;
     padding:100px;
+    -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media(max-width:1024px){
     h1{
         color:white;
-        font-family: "Bebas Neue";
-        font-size:10rem;
+        font-family: "Raleway";
+        font-size:56px;
     }
     h2{
         color:white;
         font-family: "Caveat";
-        font-size:4rem;
+        font-size:25px;
        
     }
     #overlay {
@@ -54,13 +73,13 @@ h2{
 @media(max-width:576px){
     h1{
         color:white;
-        font-family: "Bebas Neue";
-        font-size:5rem;
+        font-family: "Raleway";
+        font-size:25px;
     }
-    h2{
+    #overlay h2{
         color:white;
         font-family: "Caveat";
-        font-size:3rem;
+        font-size:12px;
        
     }
     #overlay {

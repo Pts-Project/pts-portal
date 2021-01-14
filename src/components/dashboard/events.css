@@ -1,0 +1,12 @@
+.eventsContent p{
+    color: black !important;
+    font-family: 'Raleway',"sans serif" !important;
+}
+
+.events{
+    background: #e8e8e8;
+    min-height: 90vh;
+    padding: 2%;
+    margin-bottom: 0%;   
+}
+

@@ -1,0 +1,61 @@
+.departmentsContent p{
+    color: black !important;
+    font-family: 'Raleway',"sans serif" !important;
+}
+
+.departments{
+    background: white;
+    min-height: 60vh;
+    padding: 2%;
+    margin-bottom: 0%;   
+}
+
+.departmentImg {
+    align-items: center;
+    margin-bottom: 0px;
+    border-radius: 5px 5px 0 0;
+}
+
+/* .departmentsContent  p{
+border: 1px solid #7e79b0;
+border-collapse: collapse;
+
+}  */
+
+.departTitle{
+    border: 1px solid #7e79b0;
+    color: black;
+    border-radius: 4px;
+    /* max-width: 45%; */
+    padding: 2px;
+    overflow: auto;
+    margin-top: 0px;
+
+}
+
+.card a :hover{
+background-color: #7e79b0;
+color: white;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  /* margin: 2%; */
+  overflow: hidden;
+
+  
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.depCards {
+    overflow: hidden;
+    margin: 0% 1%;
+    padding: 0% 6%;
+}
