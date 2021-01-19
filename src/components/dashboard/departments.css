@@ -25,7 +25,7 @@ border-collapse: collapse;
 .departTitle{
     border: 1px solid #7e79b0;
     color: black;
-    border-radius: 4px;
+    border-radius: 5px;
     /* max-width: 45%; */
     padding: 2px;
     overflow: auto;
@@ -36,6 +36,7 @@ border-collapse: collapse;
 .card a :hover{
 background-color: #7e79b0;
 color: white;
+border-radius: 5px;
 }
 
 .card {
@@ -51,7 +52,7 @@ color: white;
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
 }
 
 .depCards {

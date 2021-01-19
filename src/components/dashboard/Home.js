@@ -6,6 +6,8 @@ import About from './about.js';
 import Achive from './achive';
 import Departments from './Departments';
 import Events from './Events';
+import Footer from './Footer';
+// import Carousel from './carousel';
 // import { ExpandMoreIcon } from 'react-materialize';
 
 class Home extends Component {
@@ -152,7 +154,13 @@ class Home extends Component {
                     <Events />
                 </div>
 
+                <div className="Footer">
+                    <Footer />
+                </div>
+
+
             </div>
+
 
 
 

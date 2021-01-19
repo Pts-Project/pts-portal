@@ -32,11 +32,15 @@ h1{
 #overlay h2{
     color:white;
     font-family: "Caveat";
-    font-size:25px;
+    font-size:28px;
     -webkit-user-select: none;
      -moz-user-select: -moz-none;
       -ms-user-select: none;
           user-select: none;
+}
+
+#overlay h1{
+    font-weight: bold;
 }
 
 .about p{
@@ -56,12 +60,13 @@ h1{
     h1{
         color:white;
         font-family: "Raleway";
-        font-size:56px;
+        font-weight: bold;
+        font-size:62px;
     }
     h2{
         color:white;
         font-family: "Caveat";
-        font-size:25px;
+        font-size:28px;
        
     }
     #overlay {
@@ -74,7 +79,8 @@ h1{
     h1{
         color:white;
         font-family: "Raleway";
-        font-size:25px;
+        font-size:28px;
+        font-weight: bold;
     }
     #overlay h2{
         color:white;
