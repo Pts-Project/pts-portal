@@ -1,12 +1,43 @@
 .eventsContent p{
     color: black !important;
     font-family: 'Raleway',"sans serif" !important;
+    margin-top: 100px;
+    margin-bottom: 0px;
+ 
+    
 }
 
 .events{
-    background: #e8e8e8;
-    min-height: 90vh;
-    padding: 2%;
-    margin-bottom: 0%;   
+    background: #f8f1f1;
+    min-height: 70vh;
+    padding: 2% 10% 1% 10%;
+    margin-bottom: 0px;
 }
 
+.nogutter {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+
+.rowTitle{
+    text-decoration: underline;
+  text-decoration-color: grey;
+  color: black
+}
+
+.hre{
+    box-shadow: 0 10px 10px -10px #920d0d inset;
+}
+
+.hr-19 {
+  border: none;
+  height: 5px;
+  background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 5px, linear-gradient(135deg, #ffc764 5px, orange 0) 0 5px;
+  background-color: #fff;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 7px 7px;
+  margin: 0%;
+  padding: 0%;
+}
