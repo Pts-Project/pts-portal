@@ -1,0 +1,27 @@
+.bottomContentContents{
+    padding: 2%;   
+}
+
+.bottomContentContents p{
+    color: #000033 ;
+    font-family: 'Raleway',"sans serif" !important;
+}
+
+.bottomContent{
+    margin-top:2px;
+    min-height: 10vh;
+    background-color: #f8f1f1;
+}
+
+.bottomTitle h2{
+    color :#000033;
+    font-weight:bolder;
+}
+
+
+@media(max-width:576px){
+    .bottomContentContents p{
+    color: #000033 ;
+    font-family: 'Raleway',"sans serif" !important;
+}
+}
