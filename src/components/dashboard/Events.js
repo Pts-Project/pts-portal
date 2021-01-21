@@ -1,7 +1,6 @@
 import './events.css'
 import React, { Component, useEffect, CSSProperties } from 'react'
-
-//import { Container, Row, Col } from 'react-grid-system';
+import { Container, Row, Col } from 'react-grid-system';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 import ReactDOM from 'react-dom';
@@ -62,16 +61,29 @@ class Events extends Component {
 
             <div className="events">
                 <div className="eventContent">
-                    <Carousel>
-                        {this.state.ids.map((id) =>
-                            <div>
-                                <img src={this.state.links[id]} fluid />
-                                <p className="legend"> {id} {this.state.titles[id]}</p>
-                            </div>
-                        )}
-                    </Carousel>
+                    <diV className="nogutter">
+                        <Container fluid>
+                            <Row>
+                                <Col md={12}><p className="rowTitle"><h4>Events</h4></p></Col><br></br><br></br><br></br><br></br><br></br>
+                            </Row>
+                            <Row>
+                                <Col md={2} sm={0} > <hr className="hr-19"></hr></Col>
+                                <Col md={8} >
+                                    <Carousel>
+                                        {this.state.ids.map((id) =>
+                                            <div>
+                                                <img src={this.state.links[id]} fluid />
+                                                <p className="legend"> {id} {this.state.titles[id]}</p>
+                                            </div>
+                                        )}
+                                    </Carousel>
+                                </Col>
+                                <Col md={2} sm={0} > <hr className="hr-19"></hr></Col>
+                            </Row>
+                        </Container>
+                    </diV>
                 </div>
-            </div>
+            </div >
         );
     }
 }
