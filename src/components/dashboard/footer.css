@@ -1,14 +1,16 @@
 .footer {
-    background: #363636;
-    padding: 4% 1% 1% 0%;
+    background: #302e2ece;
+    padding: 0% 1% 0% 1%;
     margin-top: 0%;
 }
 
 .footerContent{
     width: 100%;
-    min-height: 60vh;
-    
+    min-height: 50vh;
+    margin: 0%;
+    text-align: justify;
 }
+
 
 
 .footer p{
