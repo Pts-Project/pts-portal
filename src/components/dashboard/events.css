@@ -1,12 +1,20 @@
 .eventsContent p{
     color: black !important;
     font-family: 'Raleway',"sans serif" !important;
+    margin-top: 100px;
+    margin-bottom: 0px;
+ 
+    
 }
 
 .events{
     background: #e8e8e8;
     min-height: 90vh;
-    padding: 2%;
-    margin-bottom: 0%;   
+    padding: 2% 5% 10% 5%;
+    margin-bottom: -10%;
 }
 
+
+.carousel {
+    border: 1px solid black;
+}
