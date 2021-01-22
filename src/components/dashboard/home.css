@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh
+    height: 95vh
 }
 
 #particles-js {
@@ -49,7 +49,7 @@ h1{
 
 #overlay {
     position: relative;
-    padding:100px;
+    margin-bottom: 100px;
     -webkit-user-select: none;
      -moz-user-select: -moz-none;
       -ms-user-select: none;
@@ -71,7 +71,7 @@ h1{
     }
     #overlay {
         position: relative;
-        padding:50px;
+        padding:40px;
     }
 }
 

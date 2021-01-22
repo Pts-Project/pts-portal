@@ -10,8 +10,9 @@ class loggedoutlinks extends Component {
                 <li><NavLink className="white-text " to="/about">About</NavLink></li>
                 <li><NavLink className="white-text" to="/events">Events</NavLink></li>
                 <li><NavLink className="white-text"  to="/register">Register</NavLink></li>
-                <li><NavLink className="white-text"  to="/login">Login</NavLink></li>
+      
                 <li><NavLink className="white-text"  to="/contact">Contact</NavLink></li>
+                <li><NavLink className="white-text"  to="/login">Login</NavLink></li>
             </div>
         );
     }
