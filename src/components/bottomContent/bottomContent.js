@@ -17,7 +17,7 @@ const BottomContent = () => {
                         <Col md={3}><p className="cols"><img src={support} width="50% "></img><h4>Mentor Support</h4></p></Col>
                         <Col md={3}><p className="cols"><img src={growth} width="50% "></img><h4>Results</h4></p></Col>
                         <Col md={3}><p className="cols"><img src={pencil} width="50% "></img><h4>Industrial Approach</h4></p></Col>
-                        <Col md={3}><p className="cols"><img src={sharing} width="40% "></img><h4>Practical Learning</h4></p></Col>
+                        <Col md={3}><p className="cols"><img src={sharing} width="50% "></img><h4>Practical Learning</h4></p></Col>
                     </Row>
                 </Container>
             </div>

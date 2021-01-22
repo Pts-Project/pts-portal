@@ -12,7 +12,7 @@ const Departments = () => {
             <div className="departmentsContent">
                 <Container fluid>
                     <Row>
-                        <Col md={12}><p className="rowTitle"><h4>DEPARTMENTS</h4></p></Col><br></br><br></br><br></br><br></br><br></br>
+                        <Col md={12}><p className="rowTitle"><h4><b>DEPARTMENTS</b></h4></p></Col><br></br><br></br><br></br><br></br><br></br>
                     </Row>
                     <Row className="depCards" justify="between">
                         <Col md={3.5} className="card" >
