@@ -23,8 +23,8 @@ class Navbar extends Component {
         }
         return (    
             <div className="navbar-fixed">
-                <nav>
-                    <div className="nav-wrapper black">
+                <nav class="transparent z-depth-0">
+                    <div className="nav-wrapper">
                         <Link to="/"><div className="logo left"><img className="logoimg" src={Logo} width="55px " alt="Platform Tech Solutions"></img></div></Link>
                         <span className="sidenav-trigger hide-on-large-only right" data-target="slide-out"><Icon>menu</Icon></span>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
