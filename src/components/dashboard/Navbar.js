@@ -16,7 +16,7 @@ class Navbar extends Component {
 
     render() {
         const val=localStorage.getItem("test")
-        if(val==='b'){
+        if(val==='a'){
             var links=<SignedInLinks></SignedInLinks>
         }else{
             var links=<SignedOutLinks></SignedOutLinks>
