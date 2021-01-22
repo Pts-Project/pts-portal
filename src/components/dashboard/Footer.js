@@ -8,7 +8,7 @@ const description = "We help our members succeed by providing mentorships. \n Pa
 const title = "Platform Techs";
 const columns = [
     {
-        title: "links",
+        title: "Links",
         resources: [
             {
                 name: "About",
@@ -36,7 +36,7 @@ const columns = [
                 link: "/locations"
             },
             {
-                name: "Hoshiarpur, India, 146023",
+                name: "Hoshiarpur,India,146023",
                 link: "/locations"
             },
             {
@@ -57,6 +57,7 @@ const Footer = () => {
                     <Row>
                         <Col md={12}>
                             <SimpleReactFooter className="hovera"
+                                
                                 description={description}
                                 title={title}
                                 columns={columns}
