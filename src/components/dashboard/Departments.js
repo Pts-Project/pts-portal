@@ -15,7 +15,7 @@ const Departments = () => {
                         <Col md={12}><p className="rowTitle"><h4><b>DEPARTMENTS</b></h4></p></Col><br></br><br></br><br></br><br></br><br></br>
                     </Row>
                     <Row className="depCards" justify="between">
-                        <Col md={3.5} className="card" >
+                        <Col md={3.5} className="card test-card" >
                             <a href="/">
                                 <span className="departmentImg">
                                     <img src={Technical} alt="Technical" resizeMode='contain'
@@ -28,7 +28,7 @@ const Departments = () => {
                                 <p><h5 className="departTitle">Technical</h5></p>
                             </a>
                         </Col>
-                        <Col md={3.5} className="card">
+                        <Col md={3.5} className="card test-card">
                             <a href="/">
                                 <span className="departmentImg">
                                     <img src={Graphics} alt="Graphics" resizeMode='contain'
@@ -41,7 +41,7 @@ const Departments = () => {
                                 <p><h5 className="departTitle">Graphics</h5></p>
                             </a>
                         </Col>
-                        <Col md={3.5} className="card">
+                        <Col md={3.5} className="card test-card">
                             <a href="/">
                                 <span className="departmentImg">
                                     <img src={Management} alt="Management" resizeMode='contain'

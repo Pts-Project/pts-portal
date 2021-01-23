@@ -3,7 +3,7 @@ import { Link, useHistory, useParams } from 'react-router-dom'
 import M from 'materialize-css'
 import reset1 from '../../assets/reset1.jpeg'
 import { Container, Row, Col } from 'react-grid-system'
-
+import './auth.css'
 
 const NewPassword = () => {
     const history = useHistory()
