@@ -7,6 +7,13 @@ import Home from './components/dashboard/Home'
 import Events from './components/dashboard/Events'
 import Login from './components/dashboard/auth/Login'
 import ResetPassword from './components/dashboard/auth/ResetPassword'
+import Signup from './components/dashboard/auth/Signup'
+import NewPassword from './components/dashboard/auth/NewPassword'
+import Events1 from './components/admin/Events1'
+import User from './components/admin/User'
+import Admin from './components/admin/Admin'
+
+
 class App extends Component {
   render() {
     return (
@@ -20,8 +27,14 @@ class App extends Component {
               <Route exact path="/" component={Home}></Route>
               <Route exact path="/events" component={Events}></Route>
               <Route exact path="/login" component={Login}></Route>
-              <Route exact path="/reset" component={ResetPassword}></Route>
-            </Switch>
+              <Route exact path="/changePassword" component={ResetPassword}></Route>
+              <Route exact path="/signup" component={Signup}></Route>
+              <Route exact path="/reset/:token" component={NewPassword}></Route>
+              <Route exact path="/admin" component={Admin}></Route>
+              <Route exact path="/user" component={User}></Route>
+              <Route exact path="/events1" component={Events1}></Route>
+           
+              </Switch>
           </div>
         </BrowserRouter>
       </div>

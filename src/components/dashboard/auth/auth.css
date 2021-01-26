@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+a{
+  color:black !important
+}
+.mycard{
+  margin-top: -10px;
+}
+h6{
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px;
+  color: rgb(78, 78, 78);
+}
+h4{
+  font-family: 'Montserrat', sans-serif !important;
+}
+.auth-card{
+  padding: 40px;
+  text-align: center;
+ 
+ background-repeat: no-repeat;
+ background-color: rgb(247, 247, 247);
+ 
+}
+ 
+
+#toast-container{
+  top: 30px !important;
+  right: 20px !important;
+  left: auto !important;
+}   
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid rgb(29, 28, 28) !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+.input-field input[type=email].valid {
+  border-bottom: 1px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid rgb(29, 28, 28) !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+.input-field input[type=password].valid {
+  border-bottom: 1px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid rgb(29, 28, 28) !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+.input-field .prefix.active {
+  color: #000;
+}

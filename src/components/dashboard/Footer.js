@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-grid-system';
 
 
 const description = "We help our members succeed by providing mentorships. \n Patform is here to help you get industry ready, via student engaged skill development along with team management.";
-const title = "Platform Techs";
+const title = "Platform Tech Club";
 const columns = [
     {
         title: "Links",
@@ -57,7 +57,7 @@ const Footer = () => {
                     <Row>
                         <Col md={12}>
                             <SimpleReactFooter className="hovera"
-                                
+
                                 description={description}
                                 title={title}
                                 columns={columns}
