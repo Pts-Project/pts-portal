@@ -14,10 +14,10 @@ const BottomContent = () => {
                         <Col md={12}><p className="bottomTitle"><h2>Why Choose Platform ?</h2></p></Col><br></br><br></br><br></br><br></br><br></br><br></br>
                     </Row>
                     <Row>
-                        <Col md={3}><p className="cols"><img src={support} width="50% "></img><h4>Mentor Support</h4></p></Col>
-                        <Col md={3}><p className="cols"><img src={growth} width="50% "></img><h4>Results</h4></p></Col>
-                        <Col md={3}><p className="cols"><img src={pencil} width="50% "></img><h4>Industrial Approach</h4></p></Col>
-                        <Col md={3}><p className="cols"><img src={sharing} width="50% "></img><h4>Practical Learning</h4></p></Col>
+                        <Col md={3}><p className="cols"><img src={support} width="40% "></img><h5>Mentor Support</h5></p></Col>
+                        <Col md={3}><p className="cols"><img src={growth} width="40% "></img><h5>Results</h5></p></Col>
+                        <Col md={3}><p className="cols"><img src={pencil} width="40% "></img><h5>Industrial Approach</h5></p></Col>
+                        <Col md={3}><p className="cols"><img src={sharing} width="40% "></img><h5>Practical Learning</h5></p></Col>
                     </Row>
                 </Container>
             </div>
