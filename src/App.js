@@ -12,7 +12,8 @@ import NewPassword from './components/dashboard/auth/NewPassword'
 import Events1 from './components/admin/Events1'
 import User from './components/admin/User'
 import Admin from './components/admin/Admin'
-
+import AdminPanel from './components/adminpanel/AddEvent'
+import AddEvent from './components/adminpanel/AddEvent';
 
 class App extends Component {
   render() {
@@ -33,7 +34,7 @@ class App extends Component {
               <Route exact path="/admin" component={Admin}></Route>
               <Route exact path="/user" component={User}></Route>
               <Route exact path="/events1" component={Events1}></Route>
-           
+              <Route exact path="/addevent" component={AddEvent}></Route>
               </Switch>
           </div>
         </BrowserRouter>
