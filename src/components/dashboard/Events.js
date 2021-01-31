@@ -5,9 +5,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import axios from 'axios';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-//import Carousel from 'react-elastic-carousel';
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
-    "mdbreact";
+
 class Events extends Component {
     constructor(props) {
         super(props);

@@ -50,7 +50,7 @@ const Login = () => {
                         <h4 style={{ letterSpacing: "2px" }}><bold>PLATFORM</bold></h4>
                     </Col>
                 </Row>
-                <Container fluid style={{width:"400px"}}>
+                <Container fluid style={{ width: "400px" }}>
                     <Row>
                         <Col>
 
