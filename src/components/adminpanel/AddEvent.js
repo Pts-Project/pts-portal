@@ -5,15 +5,36 @@ import axios from 'axios'
 
 function AddEvent(){
     const [SelImage,setSelImage]= useState("");
+    const [ImgName,setImgName]= useState("");
+
     const uploadImage=(files)=>{
-        console.log(files[0])
+     
         const formdata=new FormData()
         formdata.append('file',SelImage)
         formdata.append('upload_preset','platform')
         axios.post('https://api.cloudinary.com/v1_1/djxi7xjop/image/upload',formdata)
             .then(res=>{
-             
+            
+                console.log(res.data.secure_url)
+                const url=res.data.secure_url
+                console.log(ImgName)
+                const cloudata={
+                    image:url,
+                    name:ImgName
+                }
+                axios.post('http://localhost:5000/event/create',cloudata)
+                .then(res=>{
+                    console.log(res)
+                })
+                .catch(err=>{
+                    console.log(err)
+                })
+                
+             })
+            .catch(err=>{
+                console.log(err)
             })
+            
     };
 
     return(
@@ -28,9 +49,9 @@ function AddEvent(){
                 </label>
                 <input 
                     type="text"
-                    autoFocus
+                    value={ImgName}
                     required
-                    
+                    onChange={(e)=>{setImgName(e.target.value)}}
                 />
                 <div className="pass">
                     <label>
