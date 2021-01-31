@@ -1,33 +1,21 @@
 .eventsContent p{
     color: black !important;
     font-family: 'Raleway',"sans serif" !important;
-    margin-top: 100px;
     margin-bottom: 0px;
  
-    
 }
 
 .events{
     background: #f8f1f1;
-    min-height: 70vh;
-    padding: 2% 10% 1% 10%;
+    /* min-height: 70vh; */
+    padding: 2% 10% 0% 10%;
     margin-bottom: 0px;
 }
-
-.nogutter {
-    padding-left: 0%;
-    padding-right: 0%;
-}
-
 
 .rowTitle{
     text-decoration: underline;
   text-decoration-color: grey;
   color: black
-}
-
-.hre{
-    box-shadow: 0 10px 10px -10px #920d0d inset;
 }
 
 .hr-19 {
