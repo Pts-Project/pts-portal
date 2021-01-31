@@ -30,7 +30,7 @@ class Events extends Component {
             this.fetchImages();
     }
     fetchImages = async () => {
-        await axios.get('https://jsonplaceholder.typicode.com/photos/')
+        await axios.get('')
             .then(res => {
                 localStorage.setItem("test","a")
                 console.log("fetched data");

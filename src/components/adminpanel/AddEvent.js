@@ -1,7 +1,10 @@
 import React,{Component,useState} from 'react'
 import './AddEvent.css'
 import axios from 'axios'
+import { Router, Route, Link } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
+import { useHistory } from 'react-router-dom'
 
 function AddEvent(){
     const [SelImage,setSelImage]= useState("");
@@ -23,8 +26,8 @@ function AddEvent(){
                     name:ImgName
                 }
                 axios.post('http://localhost:5000/event/create',cloudata)
-                .then(res=>{
-                    console.log(res)
+                .then(res=>{                
+          
                 })
                 .catch(err=>{
                     console.log(err)
