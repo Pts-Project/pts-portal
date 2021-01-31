@@ -1,59 +1,47 @@
 import './events.css'
-import React, { Component, useEffect, CSSProperties } from 'react'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom';
 import { Container, Row, Col } from 'react-grid-system';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
-import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-
-
-
-
-//import { useDispatch, useSelector } from 'react-redux'
-
-
+//import Carousel from 'react-elastic-carousel';
+import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
+    "mdbreact";
 class Events extends Component {
     constructor(props) {
         super(props);
         this.state = {
             dataisLoaded: false,
             photos: [],
-            links: [],
-            ids: [],
-            index: 0,
+            images: []
         }
-
     }
     componentDidMount() {
         if (this.state.dataisLoaded === false)
             this.fetchImages();
     }
     fetchImages = async () => {
-        await axios.get('https://jsonplaceholder.typicode.com/photos/')
+        //await axios.get('/events')
+        axios.get('/events')
             .then(res => {
-                localStorage.setItem("test","a")
-                console.log("fetched data");
+                localStorage.setItem("test", "a")
                 this.setState({ photos: res.data });
-                let links = []
-                this.state.photos.map(photo =>
-                    links.push(photo.url)
-                )
-                let ids = []
-                this.state.photos.map(photo =>
-                    ids.push(photo.id)
-                )
-                let titles = []
-                this.state.photos.map(photo =>
-                    titles.push(photo.title)
+                console.log("fetched data");
+
+                let images = []
+                this.state.photos.list.map(photo =>
+                    images.push(photo)
                 )
                 this.setState({
-                    links,
-                    ids,
-                    titles,
+                    images,
                     dataisLoaded: true,
                 })
             })
+            .catch(() => {
+                console.log('no data')
+            });
+
     }
 
     render() {
@@ -62,27 +50,23 @@ class Events extends Component {
 
             <div className="events">
                 <div className="eventContent">
-                    <diV className="nogutter">
-                        <Container fluid>
-                            <Row>
-                                <Col md={12}><p className="rowTitle"><h4>Events</h4></p></Col><br></br><br></br><br></br><br></br><br></br>
-                            </Row>
-                            <Row>
-                                <Col md={2} sm={0} > <hr className="hr-19"></hr></Col>
-                                <Col md={8} >
-                                    <Carousel>
-                                        {this.state.ids.map((id) =>
-                                            <div>
-                                                <img src={this.state.links[id]} fluid />
-                                                <p className="legend"> {id} {this.state.titles[id]}</p>
-                                            </div>
-                                        )}
-                                    </Carousel>
-                                </Col>
-                                <Col md={2} sm={0} > <hr className="hr-19"></hr></Col>
-                            </Row>
-                        </Container>
-                    </diV>
+                    <Container fluid>
+                        <Row>
+                            <Col md={12}><p className="rowTitle"><h4>Events</h4></p></Col><br></br><br></br><br></br><br></br><br></br>
+                        </Row>
+                        <Carousel>
+                            {this.state.images.map((photo, indexnumber) =>
+                                <div key={indexnumber}>
+
+                                    <img className="d-block w-100" src={photo.image} fluid
+                                    />
+                                    <h3 className="legend">{photo.indexnumber} {photo.name}</h3>
+
+                                </div>
+                            )
+                            }
+                        </Carousel>
+                    </Container>
                 </div>
             </div >
         );

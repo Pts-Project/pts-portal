@@ -9,10 +9,10 @@ import Login from './components/dashboard/auth/Login'
 import ResetPassword from './components/dashboard/auth/ResetPassword'
 import Signup from './components/dashboard/auth/Signup'
 import NewPassword from './components/dashboard/auth/NewPassword'
-import Events1 from './components/admin/Events1'
-import User from './components/admin/User'
-import Admin from './components/admin/Admin'
 
+
+import AdminPanel from './components/adminpanel/AddEvent'
+import AddEvent from './components/adminpanel/AddEvent';
 
 class App extends Component {
   render() {
@@ -30,10 +30,8 @@ class App extends Component {
               <Route exact path="/changePassword" component={ResetPassword}></Route>
               <Route exact path="/signup" component={Signup}></Route>
               <Route exact path="/reset/:token" component={NewPassword}></Route>
-              <Route exact path="/admin" component={Admin}></Route>
-              <Route exact path="/user" component={User}></Route>
-              <Route exact path="/events1" component={Events1}></Route>
-           
+
+              <Route exact path="/addevent" component={AddEvent}></Route>
               </Switch>
           </div>
         </BrowserRouter>

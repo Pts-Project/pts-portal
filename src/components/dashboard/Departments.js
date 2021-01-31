@@ -46,8 +46,8 @@ const Departments = () => {
                                 <span className="departmentImg">
                                     <img src={Management} alt="Management" resizeMode='contain'
                                         style={{
-                                            maxHeight: '98%',
-                                            maxWidth: '98%'
+                                            maxHeight: '100%',
+                                            maxWidth: '100%'
                                         }}
                                     />
                                 </span>

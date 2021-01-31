@@ -7,8 +7,7 @@ import { Container, Row, Col } from 'react-grid-system';
 
 const about = () => {
 
-    let aboutContent = "Platform is an intiative by the students. It is a non profit organisation meant to provide its members a healthy environment. We encourage community learning,that is growing together with your peers. Platform provides all the necessary skills required for student including technical skill, soft skils, work ethic, team work   ..."
-
+    let aboutContent = "Platform is an intiative by the students and for the students. It is a community of tech enthusiasts. We also provide a forum for engineers, teams and enthusiasts to participate in professional technical development and networking opportunities. The aim of this society is to promote and encourage technical innovations through practical endeavours among students by organizing modelling - workshops, technical seminars and training courses. The intention is to create future leaders in chosen fields .We are not just confined to the word called tech geek rather overall development.We are packed up with a number of sub parts available in our society."
 
     return (
         <div className="about">
