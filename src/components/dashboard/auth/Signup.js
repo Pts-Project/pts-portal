@@ -49,12 +49,12 @@ const Signup = () => {
 
                 <Row>
                     <Col>
-                        <h6 style={{ letterSpacing: "2px" }}>SIGNUP</h6><br />
+                        <h6 style={{ letterSpacing: "2px" }}>ADMIN SIGNUP</h6><br />
                         <h4 style={{ letterSpacing: "2px" }}><bold>PLATFORM</bold></h4>
                     </Col>
                 </Row>
 
-                <Container fluid style={{width:"400px"}}>
+                <Container fluid style={{ width: "400px" }}>
                     <Row>
                         <Col>
                             <div class="input-field col s12" style={{ marginTop: "10%" }}>

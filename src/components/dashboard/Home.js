@@ -2,7 +2,7 @@ import React from 'react'
 import { Component } from 'react'
 import './home.css'
 import About from './about.js';
-
+import Events from './Events'
 import Departments from './Departments';
 import Achive from './achive'
 import Footer from './Footer';
@@ -146,7 +146,10 @@ class Home extends Component {
                 <div className="Achieve">
                     <Achive />
                 </div>
-
+                
+                <div className="Departments">
+                    <Events />
+                </div>
 
                 <div className="Departments">
                     <Departments />

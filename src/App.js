@@ -9,8 +9,7 @@ import Login from './components/dashboard/auth/Login'
 import ResetPassword from './components/dashboard/auth/ResetPassword'
 import Signup from './components/dashboard/auth/Signup'
 import NewPassword from './components/dashboard/auth/NewPassword'
-
-
+import AddUser from './components/adminpanel/addUser/AddUser'
 import AdminPanel from './components/adminpanel/AddEvent'
 import AddEvent from './components/adminpanel/AddEvent';
 
@@ -30,7 +29,7 @@ class App extends Component {
               <Route exact path="/changePassword" component={ResetPassword}></Route>
               <Route exact path="/signup" component={Signup}></Route>
               <Route exact path="/reset/:token" component={NewPassword}></Route>
-
+              <Route exact path="/adduser" component={AddUser}></Route>
               <Route exact path="/addevent" component={AddEvent}></Route>
               </Switch>
           </div>

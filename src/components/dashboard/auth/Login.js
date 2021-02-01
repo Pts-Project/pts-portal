@@ -29,11 +29,15 @@ const Login = () => {
             })
         }).then(res => res.json())
             .then(data => {
+                console.log(data)
                 if (data.error) {
                     M.toast({ html: data.error, classes: "#c62828 red darken-3" })
                 } else {
+                    localStorage.setItem("jwt", data.token)
+                    localStorage.setItem("user", JSON.stringify(data.user))
                     M.toast({ html: "Login Success", classes: "#43a047 green darken-1" })
                     history.push('/')
+
                 }
             }).catch(err => {
                 console.log(err)
@@ -95,13 +99,6 @@ const Login = () => {
                         </Col>
                     </Row>
                 </Container>
-
-
-
-
-
-
-
 
                 <br /><br /><br /><br /><br /><br /><br /><br />
             </div>
