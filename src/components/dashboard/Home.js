@@ -146,15 +146,16 @@ class Home extends Component {
                 <div className="Achieve">
                     <Achive />
                 </div>
-                
-                <div className="Departments">
-                    <Events />
-                </div>
+
+
 
                 <div className="Departments">
                     <Departments />
                 </div>
 
+                <div className="Events">
+                    <Events />
+                </div>
 
                 <div className="bottomContent">
                     <BottomContent />
