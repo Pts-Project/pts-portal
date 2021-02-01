@@ -1,10 +1,6 @@
 import React, { Component, useState } from 'react'
 import './AddEvent.css'
 import axios from 'axios'
-import { Router, Route, Link } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
-
-import { useHistory } from 'react-router-dom'
 
 function AddEvent() {
     const [SelImage, setSelImage] = useState("");
@@ -13,8 +9,9 @@ function AddEvent() {
     const uploadImage = (files) => {
 
         const formdata = new FormData()
-        formdata.append('file', SelImage)
+        formdata.append('file', SelImage);
         formdata.append('upload_preset', 'platform')
+        formdata.append("folder","events")
         axios.post('https://api.cloudinary.com/v1_1/djxi7xjop/image/upload', formdata)
             .then(res => {
 
@@ -25,7 +22,7 @@ function AddEvent() {
                     image: url,
                     name: ImgName
                 }
-                axios.post('/event/create', cloudata)
+                axios.post('http://localhost:5000/event/create', cloudata)
                     .then(res => {
 
                     })
