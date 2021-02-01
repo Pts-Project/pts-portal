@@ -53,8 +53,8 @@ class Events extends Component {
                             <Col md={12}><p className="rowTitle"><h4>Events</h4></p></Col><br></br><br></br><br></br><br></br><br></br>
                         </Row>
                         <Carousel>
-                            {this.state.images.map((photo, indexnumber) =>
-                                <div key={indexnumber}>
+                            {this.state.images.map((photo, _id) =>
+                                <div key={_id}>
 
                                     <img className="d-block w-100" src={photo.image} fluid
                                     />

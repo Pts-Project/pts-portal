@@ -1,23 +1,23 @@
 import React, { Component, useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import M from 'materialize-css'
 import './AddEvent.css'
 import axios from 'axios'
-import { Router, Route, Link } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
-
-import { useHistory } from 'react-router-dom'
 
 function AddEvent() {
+    const history = useHistory()
     const [SelImage, setSelImage] = useState("");
     const [ImgName, setImgName] = useState("");
 
     const uploadImage = (files) => {
 
         const formdata = new FormData()
-        formdata.append('file', SelImage)
+        formdata.append('file', SelImage);
         formdata.append('upload_preset', 'platform')
+        formdata.append("folder", "events")
         axios.post('https://api.cloudinary.com/v1_1/djxi7xjop/image/upload', formdata)
             .then(res => {
-
+                console.log(res.data)
                 console.log(res.data.secure_url)
                 const url = res.data.secure_url
                 console.log(ImgName)
@@ -25,20 +25,19 @@ function AddEvent() {
                     image: url,
                     name: ImgName
                 }
-                axios.post('/event/create', cloudata)
-                    .then(res => {
-
-                    })
-                    .catch(err => {
-                        console.log(err)
-                    })
-
-            })
-            .catch(err => {
+                axios.post('/event/create', cloudata, {
+                    headers: {
+                        'Authorization': "Bearer " + localStorage.getItem("jwt")
+                    }
+                }).then(data => {
+                    console.log(data)
+                }).catch(err => {
+                    console.log(err)
+                })
+            }).catch(err => {
                 console.log(err)
-            })
-
-    };
+            });
+    }
 
     return (
         <div>
@@ -76,4 +75,5 @@ function AddEvent() {
         </div>
     );
 }
+
 export default AddEvent;
