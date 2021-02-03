@@ -4,11 +4,13 @@ import M from 'materialize-css'
 import sin from '../../assets/sin.jpg'
 import { Container, Row, Col } from 'react-grid-system'
 import './auth.css'
+import {UserContext} from '../../../App'
 
 //o3EumnIMceQfPiwQ
 //mongodb+srv://Platform:<password>@cluster0.lsibt.mongodb.net/<dbname>?retryWrites=true&w=majority
 
 const Login = () => {
+    const {state,dispatch}=useContext(UserContext)
     const history = useHistory()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -27,7 +29,7 @@ const Login = () => {
                 email,
                 password
             })
-        }).then(res => res.json())
+        }).then(res => res.json()) 
             .then(data => {
                 console.log(data)
                 if (data.error) {
@@ -35,6 +37,7 @@ const Login = () => {
                 } else {
                     localStorage.setItem("jwt", data.token)
                     localStorage.setItem("user", JSON.stringify(data.user))
+                    dispatch({type:"USER",payload:data.user})
                     M.toast({ html: "Login Success", classes: "#43a047 green darken-1" })
                     history.push('/')
 
