@@ -1,5 +1,5 @@
 .footer {
-    background: #302e2ece;
+    background: #02010194;
     padding: 0% 1% 0% 1%;
     margin-top: 0%;
 }
@@ -9,9 +9,13 @@
     min-height: 50vh;
     margin: 0%;
     text-align: justify;
+    background: rgba(255, 255, 255, 0.116);
+    margin: 1% 0%;
 }
 
-
+.footerContent h4{
+    color: aliceblue;
+}
 
 .footer p{
     color: white;

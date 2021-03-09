@@ -45,7 +45,7 @@ const ResetPassword = () => {
             <h4 style={{ letterSpacing: "2px" }}><bold>PLATFORM</bold></h4>
           </Col>
         </Row>
-        <Container fluid style={{width:"400px"}}>
+        <Container fluid style={{ width: "400px" }}>
           <Row>
             <Col>
               <div class="input-field col s12" style={{ marginTop: "15%" }}>
@@ -66,14 +66,7 @@ const ResetPassword = () => {
               </button>
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <p>Don't have an account?</p>
 
-              <Link to="/signup"> <p style={{ color: "#6CD4CA" }}><strong>Sign Up Now</strong></p></Link>
-
-            </Col>
-          </Row>
         </Container>
 
         <br /><br /><br /><br /><br /><br /><br /><br />

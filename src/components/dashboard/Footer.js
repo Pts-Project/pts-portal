@@ -4,49 +4,6 @@ import { Container, Row, Col } from 'react-grid-system';
 
 
 
-const description = "We help our members succeed by providing mentorships. \n Patform is here to help you get industry ready, via student engaged skill development along with team management.";
-const title = "Platform Tech Club";
-const columns = [
-    {
-        title: "Links",
-        resources: [
-            {
-                name: "About",
-                link: "#about"
-            },
-            {
-                name: "Careers",
-                link: "/careers"
-            },
-            {
-                name: "Events",
-                link: "/event"
-            },
-            {
-                name: "Admin",
-                link: "/admin"
-            }
-        ]
-    },
-    {
-        title: "Reach Us",
-        resources: [
-            {
-                name: "Panjab University SSG Regional Center ",
-                link: "/locations"
-            },
-            {
-                name: "Hoshiarpur,India,146023",
-                link: "/locations"
-            },
-            {
-                name: "student@platformtechs.in",
-                link: "mailto:student@platformtechs.in"
-            }
-        ]
-    }
-];
-
 
 
 const Footer = () => {
@@ -55,24 +12,8 @@ const Footer = () => {
             <div className="footerContent">
                 <Container fluid>
                     <Row>
-                        <Col md={12}>
-                            <SimpleReactFooter className="hovera"
-
-                                description={description}
-                                title={title}
-                                columns={columns}
-                                facebook="platform.techs.31"
-                                twitter="platformtechs"
-                                instagram="page2platform"
-                                linkedin="platform-tech-solutions-086323197"
-                                pinterest=""
-                                youtube=""
-                                copyright="PlatformTechSolution | All Rights Reserved"
-                                iconColor="white"
-                                backgroundColor="#302e2ece"
-                                fontColor="lightcyan"
-                                copyrightColor="darkgrey"
-                            />;
+                        <Col md={6} sm={12}>
+                            <h4>Platform Tech Group</h4>
                         </Col>
                     </Row>
                 </Container>

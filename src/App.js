@@ -31,7 +31,7 @@ class App extends Component {
               <Route exact path="/reset/:token" component={NewPassword}></Route>
               <Route exact path="/adduser" component={AddUser}></Route>
               <Route exact path="/addevent" component={AddEvent}></Route>
-              </Switch>
+            </Switch>
           </div>
         </BrowserRouter>
       </div>
