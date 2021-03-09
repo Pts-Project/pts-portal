@@ -22,7 +22,7 @@ function AddEvent() {
                 const url = res.data.secure_url
                 console.log(ImgName)
                 const cloudata = {
-                    image: url,
+                    image: url, 
                     name: ImgName
                 }
                 axios.post('/event/create', cloudata, {
@@ -31,8 +31,13 @@ function AddEvent() {
                     }
                 }).then(data => {
                     console.log(data)
-                }).catch(err => {
-                    console.log(err)
+                    if (data.error) {
+                        M.toast({ html: data.error, classes: "#c62828 red darken-3" })
+                    } else {
+                        M.toast({ html: "Event Created", classes: "#43a047 green darken-1" })
+                        history.push('/')
+    
+                    }
                 })
             }).catch(err => {
                 console.log(err)
