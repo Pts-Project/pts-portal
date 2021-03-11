@@ -11,7 +11,7 @@ const BottomContent = () => {
             <div className="bottomContentContents">
                 <Container fluid>
                     <Row>
-                        <Col md={12}><p className="bottomTitle"><h2>Why Choose Platform ?</h2></p></Col><br></br><br></br><br></br><br></br><br></br><br></br>
+                        <Col md={12}><p className="bottomTitle"><h3>Why Choose Platform ?</h3></p></Col><br></br><br></br><br></br><br></br><br></br><br></br>
                     </Row>
                     <Row>
                         <Col md={3}><p className="cols"><img src={support} width="40% "></img><h5>Mentor Support</h5></p></Col>

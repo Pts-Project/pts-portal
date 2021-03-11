@@ -1,7 +1,7 @@
 import '../navbar.css'
 import React, { Component } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
-//import { UserContext } from '../App'
+import { UserContext } from '../../../App'
 
 
 
@@ -18,7 +18,12 @@ class loggedinlinks extends Component {
                 <li><NavLink className="white-text" to="/signup">Register</NavLink></li>
 
                 <li><NavLink className="white-text" to="/contact">Contact</NavLink></li>
-                <li><NavLink className="white-text" to="/login" >Login</NavLink></li>
+                <li><NavLink className="white-text" to="/logout" 
+               // onClick={()=>{
+                //    localStorage.clear()
+               //     dispatch({type:"CLEAR"})
+               // /</li>/}}
+                >Logout</NavLink></li>
             </div>
         );
     }

@@ -11,10 +11,13 @@
     margin-top:2px;
     min-height: 10vh;
     background-color: #f8f1f1;
+    align-items: center;
+    align-content: center;
 }
 
-.bottomTitle h2{
+.bottomTitle h3{
     color :#000033;
+    text-align: center;
     font-weight:bolder;
 }
 
