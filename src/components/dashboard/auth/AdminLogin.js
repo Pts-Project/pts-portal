@@ -8,7 +8,7 @@ import './auth.css'
 //o3EumnIMceQfPiwQ
 //mongodb+srv://Platform:<password>@cluster0.lsibt.mongodb.net/<dbname>?retryWrites=true&w=majority
 
-const Login = () => {
+const AdminLogin = () => {
     const history = useHistory()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -18,7 +18,7 @@ const Login = () => {
             M.toast({ html: "Invalid Email", classes: "#c62828 red darken-3" })
             return
         }
-        fetch("/user/login", {
+        fetch("/admin/login", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -106,4 +106,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default AdminLogin
