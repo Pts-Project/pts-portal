@@ -3,11 +3,11 @@ import '../AddEvent.css'
 import axios from 'axios'
 
 function AddUser() {
-    const [SelImage, setSelImage] = useState("");
+    const [SelImage, setSelImage] = useState("no-image");
     const [Name, setName] = useState("");
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
-
+    const [Mobile, setMobile] = useState("");
 
 
     const uploadImage = (files) => {
@@ -21,14 +21,15 @@ function AddUser() {
                 console.log(res.data.secure_url)
                 const url = res.data.secure_url
                 const userdata = {
-                    image: url,
+                     image: url,
                     name: Name,
                     email: Email,
+                    mobile: Mobile,
                     password: Password
                 }
-                axios.post('http://localhost:5000/adduser', userdata)
+                axios.post('/user/signup', userdata)
                     .then(res => {
-
+                        window.location=('/admin/panel')
                     })
                     .catch(err => {
                         console.log(err)
@@ -40,66 +41,84 @@ function AddUser() {
             })
 
     };
+    if(localStorage.getItem("admincheck")==="yes"){
+        return (
+            <div>
+                <section className="notlogin">
+                    <div className="lContainer">
+                        <div class="heading">
+                            Register User
+                    </div>
 
-    return (
-        <div>
-            <section className="notlogin">
-                <div className="lContainer">
-                    <div class="heading">
-                        Add Event
-                </div>
-
-                    <div className="pass">
-                        <label>
-                            Upload Profile Picture from Device
+                        <div className="pass">
+                            <label>
+                                Upload Profile Picture from Device
+                            </label>
+                            <input
+                                type="file"
+                                autoFocus
+                            
+                                onChange={(e) => { setSelImage(e.target.files[0]) }}
+                            />
+                        </div>
+                        <div className="pass">
+                            <label>
+                                Name
+                            </label>
+                            <input
+                                type="text"
+                                value={Name}
+                                required
+                                onChange={(e) => { setName(e.target.value) }}
+                            />
+                        </div>
+                        <div className="pass">
+                            <label>
+                                Email
                         </label>
-                        <input
-                            type="file"
-                            autoFocus
-                            required
-
-                            onChange={(e) => { setSelImage(e.target.files[0]) }}
-                        />
-                    </div>
-                    <div className="pass">
-                        <label>
-                            Name
+                            <input
+                                type="email"
+                                value={Email}
+                                required
+                                onChange={(e) => { setEmail(e.target.value) }}
+                            />
+                        </div>
+                        <div className="pass">
+                            <label>
+                                Mobile
+                            </label>
+                            <input
+                                type="text"
+                                value={Mobile}
+                                required
+                                onChange={(e) => { (setMobile(e.target.value))}}
+                            />
+                        </div>
+                        <div className="pass">
+                            <label>
+                                Password
                         </label>
-                        <input
-                            type="text"
-                            value={Name}
-                            required
-                            onChange={(e) => { setName(e.target.value) }}
-                        />
+                            <input
+                                type="password"
+                                value={Password}
+                                required
+                                onChange={(e) => { setPassword(e.target.value) }}
+                            />
+                        </div>
+                        <div className="lbtnContainer">
+                            <button className="lbtn" onClick={uploadImage} >Add</button>
+                        </div>
                     </div>
-                    <div className="pass">
-                        <label>
-                            Email
-                    </label>
-                        <input
-                            type="email"
-                            value={Email}
-                            required
-                            onChange={(e) => { setEmail(e.target.value) }}
-                        />
-                    </div>
-                    <div className="pass">
-                        <label>
-                            Password
-                    </label>
-                        <input
-                            type="password"
-                            value={Password}
-                            required
-                            onChange={(e) => { setPassword(e.target.value) }}
-                        />
-                    </div>
-                    <div className="lbtnContainer">
-                        <button className="lbtn" onClick={uploadImage} >Add</button>
-                    </div>
-                </div>
-            </section>
-        </div>
-    );
+                </section>
+            </div>
+
+        );
+    }else{
+        return(
+            <div className="sorry">
+                <h1>Sorry you are not authorized</h1>
+            </div>
+        )
+    }
 }
 export default AddUser;

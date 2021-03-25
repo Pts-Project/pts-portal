@@ -34,10 +34,13 @@ const AdminLogin = () => {
                     M.toast({ html: data.error, classes: "#c62828 red darken-3" })
                 } else {
                     localStorage.setItem("jwt", data.token)
+                    localStorage.setItem("test","a")
+                    localStorage.setItem("admincheck","yes");
                     localStorage.setItem("user", JSON.stringify(data.user))
                     M.toast({ html: "Login Success", classes: "#43a047 green darken-1" })
+            
                     history.push('/')
-
+                    window.location.reload();
                 }
             }).catch(err => {
                 console.log(err)

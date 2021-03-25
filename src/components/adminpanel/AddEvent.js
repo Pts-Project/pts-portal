@@ -30,7 +30,9 @@ function AddEvent() {
                         'Authorization': "Bearer " + localStorage.getItem("jwt")
                     }
                 }).then(data => {
+                    
                     console.log(data)
+                    window.location=('/admin/panel')
                 }).catch(err => {
                     console.log(err)
                 })
@@ -38,7 +40,7 @@ function AddEvent() {
                 console.log(err)
             });
     }
-
+if(localStorage.getItem("admincheck")==="yes"){
     return (
         <div>
             <section className="notlogin">
@@ -74,6 +76,13 @@ function AddEvent() {
             </section>
         </div>
     );
+    }else{
+        return(
+            <div className="sorry">
+                <h1>Sorry you are not authorized</h1>
+            </div>
+        );
+    }
 }
 
 export default AddEvent;

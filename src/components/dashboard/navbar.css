@@ -9,6 +9,7 @@
 
 nav{
     box-shadow: none;
+    text-decoration: none;
 }
 .sidenav-trigger{
     color:white;
@@ -17,4 +18,3 @@ nav{
 .logoimg{
     padding:5px;
 }
-

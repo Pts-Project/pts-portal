@@ -4,7 +4,7 @@ import Add from './Add'
 import './admin.css'
 
 const Admin = () => {
-
+    if(localStorage.getItem("admincheck")==="yes"){
     return (
         <div>
 
@@ -146,7 +146,15 @@ const Admin = () => {
             </div>
 
         </div>
-    )
+    );
+    }else{
+        return(
+            <div className="sorry">
+    <h1>Sorry you are not authorized</h1>
+            </div>
+        
+        );
+    }
 }
 
 export default Admin
