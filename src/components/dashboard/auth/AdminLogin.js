@@ -9,6 +9,7 @@ import './auth.css'
 //mongodb+srv://Platform:<password>@cluster0.lsibt.mongodb.net/<dbname>?retryWrites=true&w=majority
 
 const AdminLogin = () => {
+
     const history = useHistory()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -46,14 +47,14 @@ const AdminLogin = () => {
                 console.log(err)
             })
     }
-
+    if(localStorage.getItem("admincheck")==="no"){
     return (
         <div className="mycard">
             <div className="card auth-card " style={{ backgroundImage: `url(${sin})`, minWidth: "100%", minHeight: "100%", backgroundPosition: "centre", backgroundSize: "cover" }}>
 
                 <Row>
                     <Col>
-                        <h6 style={{ letterSpacing: "2px" }}>LOGIN</h6><br />
+                        <h6 style={{ letterSpacing: "2px" }}> ADMIN LOGIN</h6><br />
                         <h4 style={{ letterSpacing: "2px" }}><bold>PLATFORM</bold></h4>
                     </Col>
                 </Row>
@@ -106,7 +107,10 @@ const AdminLogin = () => {
                 <br /><br /><br /><br /><br /><br /><br /><br />
             </div>
         </div>
-    )
+    );
+    }else{
+        window.location=("/admin/panel")
+    }
 }
 
 export default AdminLogin

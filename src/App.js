@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/dashboard/Navbar.js'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Component } from 'react';
+import Footer from './components/dashboard/Footer'
 import Home from './components/dashboard/Home'
 import Events from './components/dashboard/Events'
 import Login from './components/dashboard/auth/Login'
@@ -18,6 +19,7 @@ import Panel from './components/admin/adminProfile';
 import User from './components/admin/userProfile';
 import Four from './components/404/FourOFour'
 
+
 class App extends Component {
   
   render() {
@@ -31,20 +33,21 @@ class App extends Component {
             <Switch>
            
               <Route exact path="/" component={Home}></Route>
-              <Route exact path="/user-profile" component={User}></Route>
+              <Route exact path="/user/profile" component={User}></Route>
               <Route exact path="/admin/panel" component={Panel}></Route>
               <Route exact path="/events" component={Events}></Route>
               <Route exact path="/login" component={Login}></Route>
               <Route exact path="/admin/login" component={AdminLogin}></Route>
               <Route exact path="/changePassword" component={ResetPassword}></Route>
               {/* <Route exact path="/register" component={Signup}></Route> */}
-              <Route exact path="/admin/signup" component={AdminSignup}></Route>
+              {/* <Route exact path="/admin/signup" component={AdminSignup}></Route> */}
               <Route exact path="/reset/:token" component={NewPassword}></Route>
               <Route exact path="/adduser" component={AddUser}></Route>
               <Route exact path="/addevent" component={AddEvent}></Route>
             <Route path="*" component={Four}></Route>
               </Switch>
           </div>
+          <Footer/>
         </BrowserRouter>
       </div>
     );

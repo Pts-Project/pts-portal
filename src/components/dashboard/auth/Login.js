@@ -34,6 +34,7 @@ const Login = () => {
                     M.toast({ html: data.error, classes: "#c62828 red darken-3" })
                 } else {
                     localStorage.setItem("test","a")
+                    
                     localStorage.setItem("jwt", data.token)
                     localStorage.setItem("user", JSON.stringify(data.user))
                   

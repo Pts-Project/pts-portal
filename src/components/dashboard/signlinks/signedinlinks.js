@@ -15,7 +15,7 @@ class loggedinlinks extends Component {
                 <li><Link className="white-text" to="/">Home</Link></li>
                 <li><Link className="white-text" to="/about">About</Link></li>
                 <li><Link className="white-text" to="/events">Events</Link></li>
-                <li><Link className="white-text" to="/signup">Register</Link></li>
+  
                 <li><Link className="white-text" to="/contact">Contact</Link></li>
                 <li><Link className="white-text" to="/login" >Login</Link></li>
             </div>

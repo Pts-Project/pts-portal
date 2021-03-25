@@ -22,7 +22,7 @@ const Footer = () => {
                                 <a href="#About"> <li> About</li></a>
                                 <a href="/careers"><li> Careers</li></a>
                                 <a href="/events"><li> Events</li></a>
-                                <a href="/admin"><li> Admin</li></a>
+                                <a href="/admin/login"><li> Admin</li></a>
                             </ul>
                         </Col>
                         <Col md={3}>
