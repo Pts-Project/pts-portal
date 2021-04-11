@@ -10,7 +10,7 @@ const about = () => {
     let aboutContent = "Platform is an intiative by the students and for the students. It is a community of tech enthusiasts. We also provide a forum for engineers, teams and enthusiasts to participate in professional technical development and networking opportunities. The aim of this society is to promote and encourage technical innovations through practical endeavours among students by organizing modelling - workshops, technical seminars and training courses. The intention is to create future leaders in chosen fields .We are not just confined to the word called tech geek rather overall development.We are packed up with a number of sub parts available in our society."
 
     return (
-        <div className="about">
+        <div className="about" id="about">
             <div className="aboutContent">
                 <Container fluid>
                     <Row>

@@ -1,6 +1,8 @@
 import React, { Component, useState } from 'react'
 import '../AddEvent.css'
 import axios from 'axios'
+import M from 'materialize-css'
+
 
 function AddUser() {
     const [SelImage, setSelImage] = useState("no-image");
@@ -21,7 +23,7 @@ function AddUser() {
                 console.log(res.data.secure_url)
                 const url = res.data.secure_url
                 const userdata = {
-                     image: url,
+                    image: url,
                     name: Name,
                     email: Email,
                     mobile: Mobile,
@@ -29,7 +31,8 @@ function AddUser() {
                 }
                 axios.post('/user/signup', userdata)
                     .then(res => {
-                        window.location=('/admin/panel')
+                        M.toast({ html: "Sucess", classes: "#43a047 green darken-1" })
+                        // window.location=('/admin/panel')
                     })
                     .catch(err => {
                         console.log(err)
@@ -40,8 +43,13 @@ function AddUser() {
                 console.log(err)
             })
 
+
     };
-    if(localStorage.getItem("admincheck")==="yes"){
+
+
+
+
+    if (localStorage.getItem("admincheck") === "yes") {
         return (
             <div>
                 <section className="notlogin">
@@ -57,7 +65,7 @@ function AddUser() {
                             <input
                                 type="file"
                                 autoFocus
-                            
+
                                 onChange={(e) => { setSelImage(e.target.files[0]) }}
                             />
                         </div>
@@ -79,9 +87,11 @@ function AddUser() {
                             <input
                                 type="email"
                                 value={Email}
+                                id="userEmail"
                                 required
                                 onChange={(e) => { setEmail(e.target.value) }}
                             />
+
                         </div>
                         <div className="pass">
                             <label>
@@ -91,7 +101,7 @@ function AddUser() {
                                 type="text"
                                 value={Mobile}
                                 required
-                                onChange={(e) => { (setMobile(e.target.value))}}
+                                onChange={(e) => { (setMobile(e.target.value)) }}
                             />
                         </div>
                         <div className="pass">
@@ -113,8 +123,8 @@ function AddUser() {
             </div>
 
         );
-    }else{
-        return(
+    } else {
+        return (
             <div className="sorry">
                 <h1>Sorry you are not authorized</h1>
             </div>

@@ -1,5 +1,5 @@
 .emp-profile{
-    padding: 3%;
+    padding: 1%;
     margin-top: 3%;
     margin-bottom: 3%;
     border-radius: 0.5rem;
@@ -9,7 +9,7 @@
     text-align: center;
   }
   .profile-img img{
-    width: 70%;
+    max-width: 200px;
     height: 100%;
   }
   .profile-img .file {
@@ -36,12 +36,16 @@
   }
   .profile-edit-btn{
     border: none;
-    border-radius: 1.5rem;
-    width: 70%;
-    padding: 2%;
-    font-weight: 600;
-    color: #6c757d;
+    border-radius: 1rem;
+    width: 25%;
+    padding: 2% 0%;
+    font-weight: 250;
+    color: #042644;
     cursor: pointer;
+  }
+  .profile-edit-btn:hover{
+    font-weight: bold;
+    background-color: #4CAF50;
   }
   .proile-rating{
     font-size: 12px;
@@ -67,6 +71,11 @@
   .profile-work{
     padding: 14%;
     margin-top: -15%;
+    
+  }
+
+  *{
+    box-sizing:border-box
   }
   .profile-work p{
     font-size: 12px;
@@ -74,14 +83,35 @@
     font-weight: 600;
     margin-top: 10%;
   }
-  .profile-work a{
+  .profile-work li{
     text-decoration: none;
     color: #495057;
-    font-weight: 600;
-    font-size: 14px;
+    font-size: 1rem;
   }
-  .profile-work ul{
-    list-style: none;
+  
+  .skillcontainer {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+  .skills {
+  text-align: left; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.A {width: 90%; background-color: #4CAF50;} /* Green */
+.B {width: 80%; background-color: #2196F3;} /* Blue */
+.C {width: 65%; background-color: #f44336;} /* Red */
+.D {width: 60%; background-color: #808080;} /* Dark Grey */
+
+.verticalLine {
+  border-left: thin solid #e6e0e0;
+}
+  .centerline{
+    width:70%;
+    margin: auto;
   }
   .profile-tab label{
     font-weight: 600;
@@ -99,3 +129,51 @@
   .sorry h1{
     color:black;
   }
+
+  hr.style18 { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: black; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+} 
+
+
+
+.nav-link.active {
+    color: white !important;
+    font-weight: bold !important;
+    background-color: black !important;
+}
+
+.nav-link i {
+  padding-right: 0.5em;
+}
+
+.tabOption {
+  /* background-color: rgb(195, 202, 228); */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.tabOption label{
+  /* text-align: left; */
+  color: grey;
+}
+
+.tabOption label ::after{
+    content:"";   
+    border-top: 10px solid black;
+    
+}
+/* hr.style18:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+} */

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import M from 'materialize-css'
 import sin from '../../assets/sin.jpg'
@@ -33,14 +33,14 @@ const Login = () => {
                 if (data.error) {
                     M.toast({ html: data.error, classes: "#c62828 red darken-3" })
                 } else {
-                    localStorage.setItem("test","a")
+                    localStorage.setItem("test", "a")
                     localStorage.setItem("jwt", data.token)
                     localStorage.setItem("user", JSON.stringify(data.user))
-                  
-                    localStorage.setItem("admincheck","no");
+
+                    localStorage.setItem("admincheck", "no");
                     M.toast({ html: "Login Success", classes: "#43a047 green darken-1" })
                     window.location.reload();
-                    window.location=('/')
+                    window.location = ('/')
 
                 }
             }).catch(err => {
@@ -94,11 +94,11 @@ const Login = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <p>Forgot Password ?</p>
-
-                            <Link to="/changePassword"> <p style={{ color: "#6CD4CA" }}><strong>Reset Your Password</strong></p></Link>
-                            <br /> <p>Don't have an account ?</p>
-                            <Link to="/signup"> <p style={{ color: "#6CD4CA" }}><strong>Sign Up Now</strong></p></Link>
+                            <p style={{ color: "grey" }}>Forgot Password ?<br />
+                                <Link to="/changePassword"> <strong>Reset Your Password</strong></Link></p>
+                            <br />
+                            <p style={{ color: "grey" }}>Dont have an account ?<br />
+                                <u><a href="mailto:platformtech44@gmail.com">Contact your Adminstrator</a></u></p>
 
                         </Col>
                     </Row>

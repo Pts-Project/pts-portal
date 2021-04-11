@@ -5,7 +5,7 @@ import About from './about.js';
 import Events from './Events'
 import Departments from './Departments';
 import Achive from './achive'
-import Footer from './Footer';
+
 import BottomContent from '../bottomContent/bottomContent';
 import Particles from 'react-particles-js';
 // import Carousel from './carousel';
@@ -139,11 +139,11 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <div className="about">
+                <div className="about" id="about">
                     <About />
                 </div>
 
-                <div className="Achieve">
+                <div className="Achieve" id="achive">
                     <Achive />
                 </div>
 
@@ -153,17 +153,15 @@ class Home extends Component {
                     <Departments />
                 </div>
 
-                <div className="Events">
+                <div className="events" id="events">
                     <Events />
                 </div>
 
-                <div className="bottomContent">
+                <div className="bottomContent" id="bottomContents">
                     <BottomContent />
                 </div>
 
-                <div className="Footer">
-                    <Footer />
-                </div>
+
 
 
 

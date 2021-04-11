@@ -19,23 +19,23 @@ const Footer = () => {
                         <Col md={1}>
                             <h5>Links</h5>
                             <ul>
-                                <a href="#About"> <li> About</li></a>
+                                <a href="/#about"> <li> About</li></a>
                                 <a href="/careers"><li> Careers</li></a>
-                                <a href="/events"><li> Events</li></a>
-                                <a href="/admin"><li> Admin</li></a>
+                                <a href="/#events"><li> Events</li></a>
+                                <a href="/admin/login"><li> Admin</li></a>
                             </ul>
                         </Col>
                         <Col md={3}>
                             <h5>Reach Us</h5>
                             <ul>
                                 <p>
-                                    <a href="https://goo.gl/maps/vo9jhJGraN72p2Sv9">
-                                        <p>Panjab University SSG Regional Centre <br></br>
-                                        Hoshiarpur,Punjab , India, 146023
+                                    <ul><a href="https://goo.gl/maps/vo9jhJGraN72p2Sv9">
+                                        <p align="left">Panjab University SSG Regional Centre <br></br>
+                                        Hoshiarpur, Punjab, India, 146023
                                         </p>
-                                    </a>
+                                    </a></ul>
                                     <a href="mailto:student@platformtechs.in">
-                                        <p>student@platformtechs.in</p>
+                                        <p align="left">student@platformtechs.in</p>
                                     </a>
                                 </p>
                             </ul>

@@ -30,9 +30,10 @@ function AddEvent() {
                         'Authorization': "Bearer " + localStorage.getItem("jwt")
                     }
                 }).then(data => {
-                    
+
                     console.log(data)
-                    window.location=('/admin/panel')
+                    M.toast({ html: "Sucess", classes: "#43a047 green darken-1" })
+                    // window.location=('/admin/panel')
                 }).catch(err => {
                     console.log(err)
                 })
@@ -40,44 +41,44 @@ function AddEvent() {
                 console.log(err)
             });
     }
-if(localStorage.getItem("admincheck")==="yes"){
-    return (
-        <div>
-            <section className="notlogin">
-                <div className="lContainer">
-                    <div class="heading">
-                        Add Event
+    if (localStorage.getItem("admincheck") === "yes") {
+        return (
+            <div>
+                <section className="notlogin">
+                    <div className="lContainer">
+                        <div class="heading">
+                            Add Event
                 </div>
-                    <label>
-                        Event Name
-                </label>
-                    <input
-                        type="text"
-                        value={ImgName}
-                        required
-                        onChange={(e) => { setImgName(e.target.value) }}
-                    />
-                    <div className="pass">
                         <label>
-                            Upload Image from Device
-                    </label>
+                            Event Name
+                </label>
                         <input
-                            type="file"
-                            autoFocus
+                            type="text"
+                            value={ImgName}
                             required
-
-                            onChange={(e) => { setSelImage(e.target.files[0]) }}
+                            onChange={(e) => { setImgName(e.target.value) }}
                         />
+                        <div className="pass">
+                            <label>
+                                Upload Image from Device
+                    </label>
+                            <input
+                                type="file"
+                                autoFocus
+                                required
+
+                                onChange={(e) => { setSelImage(e.target.files[0]) }}
+                            />
+                        </div>
+                        <div className="lbtnContainer">
+                            <button className="lbtn" onClick={uploadImage} >Add</button>
+                        </div>
                     </div>
-                    <div className="lbtnContainer">
-                        <button className="lbtn" onClick={uploadImage} >Add</button>
-                    </div>
-                </div>
-            </section>
-        </div>
-    );
-    }else{
-        return(
+                </section>
+            </div>
+        );
+    } else {
+        return (
             <div className="sorry">
                 <h1>Sorry you are not authorized</h1>
             </div>

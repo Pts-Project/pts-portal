@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import axios from 'axios';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import noevents from '../assets/noevents.gif'
 
 class Events extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class Events extends Component {
         //await axios.get('/events')
         axios.get('/events')
             .then(res => {
-                localStorage.setItem("test", "a")
+                //localStorage.setItem("test", "a")
                 this.setState({ photos: res.data });
                 console.log("fetched data");
 
@@ -38,6 +39,19 @@ class Events extends Component {
             })
             .catch(() => {
                 console.log('no data')
+                let images = [
+                    {
+                        "indexnumber": "1",
+                        "_id": "606af2577acb160b40638fff",
+                        "name": "No Event Sheduled",
+                        "image": noevents,
+                        "__v": 0
+                    }
+                ];
+                this.setState({
+                    images,
+                    dataisLoaded: true,
+                })
             });
 
     }
@@ -52,13 +66,13 @@ class Events extends Component {
                         <Row>
                             <Col md={12}><p className="rowTitle"><h4>Events</h4></p></Col><br></br><br></br><br></br><br></br><br></br>
                         </Row>
-                        <Carousel>
+                        <Carousel className="carousel">
                             {this.state.images.map((photo, _id) =>
                                 <div key={_id}>
 
-                                    <img className="d-block w-100" src={photo.image} fluid
+                                    <img className="d-block w-100" src={photo.image} fluid alt={photo.name}
                                     />
-                                    <h3 className="legend">{photo.indexnumber} {photo.name}</h3>
+                                    <h3 className="legend">{photo.name}</h3>
 
                                 </div>
                             )

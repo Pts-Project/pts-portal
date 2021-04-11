@@ -8,7 +8,7 @@ import Events from './components/dashboard/Events'
 import Login from './components/dashboard/auth/Login'
 import AdminLogin from './components/dashboard/auth/AdminLogin'
 import ResetPassword from './components/dashboard/auth/ResetPassword'
-import Signup from './components/dashboard/auth/Signup'
+// import Signup from './components/dashboard/auth/Signup'
 import AdminSignup from './components/dashboard/auth/AdminSignup'
 import NewPassword from './components/dashboard/auth/NewPassword'
 import AddUser from './components/adminpanel/addUser/AddUser'
@@ -17,35 +17,40 @@ import AddEvent from './components/adminpanel/AddEvent';
 import Panel from './components/admin/adminProfile';
 import User from './components/admin/userProfile';
 import Four from './components/404/FourOFour'
+import Footer from './components/dashboard/Footer';
+
 
 class App extends Component {
-  
+
   render() {
     return (
-      <div>
-
-
-        <BrowserRouter>
-          <div className="App">
-          <Navbar />
+      <div >
+        <BrowserRouter className="maindiv">
+          <div className="App maindiv">
+            <Navbar />
             <Switch>
-           
               <Route exact path="/" component={Home}></Route>
-              <Route exact path="/user-profile" component={User}></Route>
+              <Route exact path="/user/profile" component={User}></Route>
               <Route exact path="/admin/panel" component={Panel}></Route>
               <Route exact path="/events" component={Events}></Route>
               <Route exact path="/login" component={Login}></Route>
+
               <Route exact path="/admin/login" component={AdminLogin}></Route>
               <Route exact path="/changePassword" component={ResetPassword}></Route>
               {/* <Route exact path="/register" component={Signup}></Route> */}
               <Route exact path="/admin/signup" component={AdminSignup}></Route>
               <Route exact path="/reset/:token" component={NewPassword}></Route>
-              <Route exact path="/adduser" component={AddUser}></Route>
+              <Route exact path="/users/adduser" component={AddUser}></Route>
+              <Route exact path="/users/alluser" component={AddUser}></Route>
               <Route exact path="/addevent" component={AddEvent}></Route>
-            <Route path="*" component={Four}></Route>
-              </Switch>
+              <Route path="*" component={Four}></Route>
+            </Switch>
+          </div>
+          <div className="Footer" id="contact">
+            <Footer />
           </div>
         </BrowserRouter>
+
       </div>
     );
   }
@@ -106,7 +111,7 @@ const Routing = () => {
 }
 
 function App () {
-  
+
 
     const [state, dispatch] = useReducer(reducer, initialState)
     return (
@@ -116,9 +121,9 @@ function App () {
       <Routing/>
       </BrowserRouter>
     </UserContext.Provider>
-     
+
     );
-  
+
 }
 
 export default App;

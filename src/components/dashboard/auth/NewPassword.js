@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react'
-import { Link, useHistory, useParams } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
 import M from 'materialize-css'
 import reset1 from '../../assets/reset1.jpeg'
 import { Container, Row, Col } from 'react-grid-system'
@@ -36,7 +36,7 @@ const NewPassword = () => {
                 }
                 else {
                     M.toast({ html: data.message, classes: "#43a047 green darken-1" })
-                    history.push('/signin')
+                    history.push('/login')
                 }
             }).catch(err => {
                 console.log(err)
@@ -56,7 +56,7 @@ const NewPassword = () => {
                     </Col>
                 </Row>
 
-                <Container fluid style={{width:"400px"}}>
+                <Container fluid style={{ width: "400px" }}>
                     <Row>
                         <Col>
                             <div class="input-field col s12" style={{ marginTop: "90px" }}>
@@ -81,7 +81,7 @@ const NewPassword = () => {
                         </Col>
                     </Row>
 
-                  
+
                     <Row>
                         <Col>
                             <button id="btn1" style={{ width: "200px", borderRadius: "50px", marginTop: "100px", marginBottom: "30px", letterSpacing: "2px" }} className="btn waves-effect #212121 grey darken-4"
