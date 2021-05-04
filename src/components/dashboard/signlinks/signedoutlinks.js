@@ -17,6 +17,7 @@ class loggedoutlinks extends Component {
         window.location = ('/')
     }
     render() {
+        if(localStorage.getItem("admincheck")==="no"){
         return (
             <div>
                 <li><Link className="white-text" to="/">Home</Link></li>
@@ -28,6 +29,20 @@ class loggedoutlinks extends Component {
                 <li><Link className="white-text" onClick={this.handleLogout}>Logout</Link></li>
             </div>
         );
+        }
+        else{
+            return (
+                <div>
+                    <li><Link className="white-text" to="/">Home</Link></li>
+                    <li><a className="white-text" href="/#about">About</a></li>
+                    <li><a className="white-text" href="/#events">Events</a></li>
+    
+                    <li><a className="white-text" href="/admin/panel">Panel</a></li>
+                    
+                    <li><Link className="white-text" onClick={this.handleLogout}>Logout</Link></li>
+                </div>
+            );
+        }
     }
 }
 export default loggedoutlinks;

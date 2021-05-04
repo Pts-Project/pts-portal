@@ -18,7 +18,7 @@ import Panel from './components/admin/adminProfile';
 import User from './components/admin/userProfile';
 import Four from './components/404/FourOFour'
 import Footer from './components/dashboard/Footer';
-
+import EditProfile from './components/admin/EditProfile'
 
 class App extends Component {
 
@@ -34,7 +34,7 @@ class App extends Component {
               <Route exact path="/admin/panel" component={Panel}></Route>
               <Route exact path="/events" component={Events}></Route>
               <Route exact path="/login" component={Login}></Route>
-
+              <Route exact path="/user/editprofile" component={EditProfile}></Route>
               <Route exact path="/admin/login" component={AdminLogin}></Route>
               <Route exact path="/changePassword" component={ResetPassword}></Route>
               {/* <Route exact path="/register" component={Signup}></Route> */}

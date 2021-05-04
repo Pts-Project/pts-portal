@@ -3,6 +3,7 @@ import { M } from 'materialize-css'
 import './admin.css'
 import profilePic from '../assets/defaultprofilepic.jpg'
 import { Row, Col, Nav, Tab } from 'react-bootstrap'
+import EditProfile from './EditProfile'
 
 
 const User = () => {
@@ -13,7 +14,9 @@ const User = () => {
     console.log(details.name);
 
     var profilepic = profilePic;
-
+    const EditProfile=(e)=>{
+        window.location="/user/editprofile"
+    }
 
     if ((localStorage.getItem("test") === "a") && localStorage.getItem("admincheck") === "no") {
 
@@ -38,7 +41,7 @@ const User = () => {
                                     <h5>
                                         {details.name}
                                     </h5>
-                                    <h6>
+                                    <h6> 
                                         {details.role}
                                     </h6>
                                 </div>
@@ -76,7 +79,7 @@ const User = () => {
 
                                             <p align="right">
                                                 <i className="material-icons prefix">mode_edit</i>
-                                                <input type="button" class="profile-edit-btn" name="editprofile" value="EditProfile" align="right" /></p>
+                                                <input type="button" class="profile-edit-btn" name="editprofile" value="EditProfile" align="right" onClick={EditProfile} /></p>
                                             <div>
                                                 <p> <br /></p>
                                                 <div class="row">
