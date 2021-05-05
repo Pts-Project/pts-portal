@@ -30,11 +30,12 @@ function EditProfile() {
                 }
                 console.log(userdata)
                 const id=details._id
-                alert("inprocess")
+             
                 axios.put(`http://localhost:5000/updateProfile/`+id, userdata)
                     .then(res => {
                         // M.toast({ html: "Success", classes: "#43a047 green darken-1" })
                         // window.location=('/admin/panel')
+                        localStorage.setItem("user",JSON.stringify(res.data))
                         alert("updated")
                     })
                     .catch(err => {

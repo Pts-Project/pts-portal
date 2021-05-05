@@ -7,13 +7,14 @@ import { Row, Col, Nav, Tab } from 'react-bootstrap'
 import Events from '../dashboard/Events'
 import AddUser from '../adminpanel/addUser/AddUser'
 import AddEvent from '../adminpanel/AddEvent';
-
+import DeleteUser from '../adminpanel/deleteUser/DeleteUser'
+import Alluser from '../adminpanel/AllUser/Alluser'
 const Admin = () => {
     console.log(localStorage.getItem('user'));
 
     const details = JSON.parse(localStorage.getItem('user'))
 
-    console.log(details.name);
+  
 
     var profilepic = profilePic;
 
@@ -159,13 +160,18 @@ const Admin = () => {
                                         <Tab.Pane eventKey="addUser">
                                             <AddUser />
                                         </Tab.Pane>
-                                        <Tab.Pane eventKey="allEvents">
+                                        <Tab.Pane eventKey="allEvents"> 
                                             <Events />
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="addEvents">
                                             <AddEvent />
                                         </Tab.Pane>
-
+                                        <Tab.Pane eventKey="deleteUser">
+                                            <DeleteUser />
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="allUser">
+                                            <Alluser />
+                                        </Tab.Pane>
                                     </Tab.Content>
                                 </Col>
                             </Row>
