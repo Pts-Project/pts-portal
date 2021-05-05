@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
-
+import Card from '../deleteUser/DeleteCard'
 function DeleteUser() {
     const [allUser, setAllUser] = useState([])
     axios.get("/allUsers")
@@ -30,10 +30,39 @@ function DeleteUser() {
 
         // }
 
-    return(
-      <div>{names}</div> 
-       
-    );
+        return(
+            <div> 
+                <div
+                    style={{
+                        fontSize: "3rem",
+                        marginTop: "20px",
+                        color: "#fff",
+                    }}
+                    ><div className="tophead">All Users</div>
+                        
+                </div>
+    
+                <div className="row">    
+                    {allUser.map((user)=>(
+                        <div className="bot" key={user._id}>
+                        
+                                    <Card  
+                                        name={user.name} 
+                                        email={user.email}
+                                        mobile={user.mobile}
+                                        _id={user._id}
+                                        // officelocation={user.}
+                                        // company={job.company}
+                                        // publisher={job.publisher}
+                                    />
+                        
+                        
+                        </div>
+                    ))}
+                </div>
+    
+            </div>
+        );
 }
 
 export default DeleteUser
