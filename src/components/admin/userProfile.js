@@ -1,19 +1,19 @@
 import React from 'react'
-import { M } from 'materialize-css'
+
 import './admin.css'
 import profilePic from '../assets/defaultprofilepic.jpg'
 import { Row, Col, Nav, Tab } from 'react-bootstrap'
-import EditProfile from './EditProfile'
-
+import AddProject from '../../components/AddProject/AddProject'
+import AllProjects from '../../components/AddProject/AllProjects'
 
 const User = () => {
-    console.log(localStorage.getItem('user'));
+ 
 
     const details = JSON.parse(localStorage.getItem('user'))
 
     console.log(details.name);
 
-    var profilepic = profilePic;
+    var profilepic = details.image;
     const EditProfile=(e)=>{
         window.location="/user/editprofile"
     }
@@ -30,10 +30,7 @@ const User = () => {
                                 <div class="profile-img">
                                     <img src={profilepic} alt="profile picture" width="110px" />
 
-                                    <div class="file btn btn-lg btn-primary">
-                                        <label>change photo</label>
-                                        <input type="file" name="file" />
-                                    </div>
+                          
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -71,6 +68,14 @@ const User = () => {
                                                 <i className="material-icons prefix">group_work</i>
                                         My Projects</Nav.Link>
                                         </Nav.Item>
+                                        
+                                        <Nav.Item >
+                                            <Nav.Link eventKey="addproject" >
+                                            <i className="material-icons prefix">add</i> Add Project
+                                        </Nav.Link>
+                                        </Nav.Item>
+
+
                                     </Nav>
                                 </Col>
                                 <Col sm={9}>
@@ -103,7 +108,7 @@ const User = () => {
                                                         <label>Contact No</label>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <p>{details.contactnumber}</p>
+                                                        <p>{details.mobile}</p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -111,7 +116,7 @@ const User = () => {
                                                         <label>Designation</label>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <p>{details.designation}</p>
+                                                        <p>{details.role}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,10 +142,12 @@ const User = () => {
                                             </div>
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="myProjects">
-                                            <p>my projects</p>
+                                            <AllProjects/>
                                         </Tab.Pane>
-
-
+                                        <Tab.Pane eventKey="addproject">
+                                            <AddProject/>
+                                        </Tab.Pane>
+                                          
                                     </Tab.Content>
                                 </Col>
                             </Row>

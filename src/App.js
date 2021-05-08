@@ -21,6 +21,8 @@ import Footer from './components/dashboard/Footer';
 import EditProfile from './components/admin/EditProfile'
 import DeleteUser from './components/adminpanel/deleteUser/DeleteUser'
 import Allusers from './components/adminpanel/AllUser/Alluser'
+import AddProject from './components/AddProject/AddProject'
+import AllProjects from "./components/AddProject/AllProjects"
 class App extends Component {
 
   render() {
@@ -45,7 +47,9 @@ class App extends Component {
               <Route exact path="/users/alluser" component={AddUser}></Route>
               <Route exact path="/addevent" component={AddEvent}></Route>
               <Route exact path="/deleteuser" component={DeleteUser}></Route>
+              <Route exact path="/user/addproject" component={AddProject}></Route>
               <Route exact path="/alluser" component={Allusers}></Route>
+              <Route exact path="/user/allprojects" component={AllProjects}></Route>
               <Route path="*" component={Four}></Route>
             </Switch>
           </div>

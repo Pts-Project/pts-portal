@@ -37,6 +37,7 @@ function EditProfile() {
                         // window.location=('/admin/panel')
                         localStorage.setItem("user",JSON.stringify(res.data))
                         alert("updated")
+                        window.location="/user/profile"
                         
                     })
                     .catch(err => {

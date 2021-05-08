@@ -1,12 +1,13 @@
 import axios from 'axios'
 import React from 'react'
-
+import { useAlert } from 'react-alert'
 function DeleteCard(props){
 
     
     const id=props._id
-    console.log(id)
+ 
     const DeleteUser=(e)=>{
+ 
         axios.delete(`/deleteUser/`+id)
         .then(res=>{
          

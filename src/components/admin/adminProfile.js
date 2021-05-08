@@ -1,6 +1,5 @@
 import React from 'react'
-import M from 'materialize-css'
-import Add from './Add'
+
 import './admin.css'
 import profilePic from '../assets/defaultprofilepic.jpg'
 import { Row, Col, Nav, Tab } from 'react-bootstrap'
@@ -13,7 +12,7 @@ const Admin = () => {
     console.log(localStorage.getItem('user'));
 
     const details = JSON.parse(localStorage.getItem('user'))
-
+    console.log(details)
   
 
     var profilepic = profilePic;
@@ -116,23 +115,23 @@ const Admin = () => {
                                                         <label>Email</label>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <p>{details.email}</p>
+                                                        <p>{details.email}</p>  
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                {/* <div class="row">
                                                     <div class="col-md-6">
                                                         <label>Contact No</label>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <p>{details.contactnumber}</p>
+                                                        <p>{details.mobile}</p>
                                                     </div>
-                                                </div>
+                                                </div> */}
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <label>Designation</label>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <p>{details.designation}</p>
+                                                        <p>{details.role}</p>
                                                     </div>
                                                 </div>
                                             </div>

@@ -1,9 +1,9 @@
 .card {
-    background-color: #0d0d0d;
-    color: #fff;
+    background-color: white;
+    color: black;
     padding: 20px;
     height: max-content;
-    border: 1px solid #000;
+    border: 1px solid black;
     border-radius: 4px;
     margin:10px;
     font-size:20px;
@@ -23,7 +23,4 @@ button{
     border-radius: 4px;
     color: black;
 
-}
-.anchor{
-    color:white;
 }

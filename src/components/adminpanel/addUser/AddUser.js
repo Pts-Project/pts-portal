@@ -32,7 +32,13 @@ function AddUser() {
                 axios.post('/user/signup', userdata)
                     .then(res => {
                         M.toast({ html: "Sucess", classes: "#43a047 green darken-1" })
-                        // window.location=('/admin/panel')
+                        setEmail("")
+                        setMobile("")
+                                                setName("")
+                        setPassword("")
+                        setSelImage("")
+                        window.location.reload();
+                        window.location=('/admin/panel')
                     })
                     .catch(err => {
                         console.log(err)
