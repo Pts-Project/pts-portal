@@ -8,6 +8,8 @@ function AddEvent() {
     const history = useHistory()
     const [SelImage, setSelImage] = useState("");
     const [ImgName, setImgName] = useState("");
+    
+     const [formurl, setFormurl] = useState("")
 
     const uploadImage = (files) => {
 
@@ -23,7 +25,8 @@ function AddEvent() {
                 console.log(ImgName)
                 const cloudata = {
                     image: url,
-                    name: ImgName
+                    name: ImgName,
+                    formulr:formurl
                 }
                 axios.post('/event/create', cloudata, {
                     headers: {
@@ -57,6 +60,17 @@ function AddEvent() {
                             value={ImgName}
                             required
                             onChange={(e) => { setImgName(e.target.value) }}
+                        />
+
+
+                        <label>
+                            Add Form Url                            
+                        </label>
+                        <input
+                            type="text"
+                            value={formurl}
+                            required
+                            onChange={(e) => { setFormurl(e.target.value) }}
                         />
                         <div className="pass">
                             <label>
