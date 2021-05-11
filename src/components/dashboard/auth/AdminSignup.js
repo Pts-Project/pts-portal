@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-grid-system'
 import './auth.css'
 
 
-const Signup = () => {
+const AdminSignup = () => {
     const history = useHistory()
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -19,7 +19,7 @@ const Signup = () => {
             M.toast({ html: "Passwords do not match", classes: "#c62828 red darken-3" })
             return
         }
-        fetch("/user/signup", {
+        fetch("/admin/signup", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -30,6 +30,7 @@ const Signup = () => {
                 password,
                 confirmPassword,
                 mobile
+                
             })
         }).then(res => res.json())
             .then(data => {
@@ -142,4 +143,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default AdminSignup

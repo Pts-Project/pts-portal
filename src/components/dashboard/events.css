@@ -1,43 +1,34 @@
-.eventsContent p{
-    color: black !important;
-    font-family: 'Raleway',"sans serif" !important;
-    margin-top: 100px;
-    margin-bottom: 0px;
- 
-    
+.events {
+  background: #f8f1f1;
+  padding: 0% 10% 0% 10%;
+  margin-bottom: 0px;
 }
 
-.events{
-    background: #f8f1f1;
-    min-height: 70vh;
-    padding: 2% 10% 1% 10%;
-    margin-bottom: 0px;
-}
-
-.nogutter {
-    padding-left: 0%;
-    padding-right: 0%;
-}
-
-
-.rowTitle{
-    text-decoration: underline;
+.rowTitle {
+  text-decoration: underline;
   text-decoration-color: grey;
-  color: black
+  color: black;
 }
 
-.hre{
-    box-shadow: 0 10px 10px -10px #920d0d inset;
+.carousel {
+  width: auto;
+  height: auto;
+  /* border: 1px solid black; */
 }
 
-.hr-19 {
-  border: none;
-  height: 5px;
-  background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 5px, linear-gradient(135deg, #ffc764 5px, orange 0) 0 5px;
-  background-color: #fff;
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  background-size: 7px 7px;
-  margin: 0%;
-  padding: 0%;
+.carousel .thumb img {
+  width: 100% !important;
+  max-height: 50px !important;
+}
+
+.carousel .slide img {
+  max-height: 400px; /* change this to whatever you want */
+  object-fit: contain;
+  width: auto;
+}
+
+.eventreg h2 {
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }

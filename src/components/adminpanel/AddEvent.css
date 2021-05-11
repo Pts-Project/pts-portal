@@ -56,12 +56,11 @@
   
   .notlogin .lContainer input {
     width: 100%;
-    border: none;
+    border: 1px solid black;
     outline: none;
     font-size: 19px;
-    padding: 1px;
     background: rgba(121, 121, 121, 0.1);
-    letter-spacing: 1px;
+
   }
   
   .notlogin .lContainer .lbtnContainer {
@@ -94,4 +93,7 @@
   }
   .pass input{
     color:black
+  }
+  .sorry h1{
+    color:black;
   }

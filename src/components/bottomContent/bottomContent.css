@@ -10,7 +10,7 @@
 .bottomContent{
     margin-top:2px;
     min-height: 10vh;
-    background-color: #f8f1f1;
+    background-color: #f7f8f8;
 }
 
 .bottomTitle h2{
@@ -24,4 +24,11 @@
     color: #000033 ;
     font-family: 'Raleway',"sans serif" !important;
 }
+}
+
+.cols h5{
+    color:black
+}
+.bottomContent{
+    color: black;
 }

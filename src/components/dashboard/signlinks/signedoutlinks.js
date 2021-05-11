@@ -1,20 +1,48 @@
 
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
+//mport { createBrowserHistory } from 'history';
+//import { useHistory } from "react-router-dom";
+import './sign.css'
 class loggedoutlinks extends Component {
+    constructor(props) {
+        super(props);
+        this.handleLogout = this.handleLogout.bind(this);
+    }
+    handleLogout = (e) => {
+        localStorage.clear();
+        localStorage.setItem("test", "b")
+        localStorage.setItem("admincheck", "no")
+        window.location.reload();
+        window.location = ('/')
+    }
     render() {
+        if(localStorage.getItem("admincheck")==="no"){
         return (
             <div>
-                <li><NavLink className="white-text" to="/">Home</NavLink></li>
-                <li><NavLink className="white-text " to="/about">About</NavLink></li>
-                <li><NavLink className="white-text" to="/events">Events</NavLink></li>
-                <li><NavLink className="white-text" to="/register">Register</NavLink></li>
+                <li><Link className="white-text" to="/">Home</Link></li>
+                <li><a className="white-text" href="/#about">About</a></li>
+                <li><a className="white-text" href="/#events">Events</a></li>
 
-                <li><NavLink className="white-text" to="/contact">Contact</NavLink></li>
-                <li><NavLink className="white-text" to="/logout">Logout</NavLink></li>
+                <li><a className="white-text" href="#contact">Contact</a></li>
+                <li><a className="white-text" href="/user/profile">Profile</a></li>
+                <li><Link className="white-text" onClick={this.handleLogout}>Logout</Link></li>
             </div>
         );
+        }
+        else{
+            return (
+                <div>
+                    <li><Link className="white-text" to="/">Home</Link></li>
+                    <li><a className="white-text" href="/#about">About</a></li>
+                    <li><a className="white-text" href="/#events">Events</a></li>
+    
+                    <li><a className="white-text" href="/admin/panel">Panel</a></li>
+                    
+                    <li><Link className="white-text" onClick={this.handleLogout}>Logout</Link></li>
+                </div>
+            );
+        }
     }
 }
 export default loggedoutlinks;

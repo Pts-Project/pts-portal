@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import M from 'materialize-css'
 import sin from '../../assets/sin.jpg'
@@ -18,7 +18,7 @@ const Login = () => {
             M.toast({ html: "Invalid Email", classes: "#c62828 red darken-3" })
             return
         }
-        fetch("/login", {
+        fetch("/user/login", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -29,11 +29,19 @@ const Login = () => {
             })
         }).then(res => res.json())
             .then(data => {
+                console.log(data)
                 if (data.error) {
                     M.toast({ html: data.error, classes: "#c62828 red darken-3" })
                 } else {
+                    localStorage.setItem("test", "a")
+                    localStorage.setItem("jwt", data.token)
+                    localStorage.setItem("user", JSON.stringify(data.user))
+
+                    localStorage.setItem("admincheck", "no");
                     M.toast({ html: "Login Success", classes: "#43a047 green darken-1" })
-                    history.push('/')
+                    window.location.reload();
+                    window.location = ('/')
+
                 }
             }).catch(err => {
                 console.log(err)
@@ -50,7 +58,7 @@ const Login = () => {
                         <h4 style={{ letterSpacing: "2px" }}><bold>PLATFORM</bold></h4>
                     </Col>
                 </Row>
-                <Container fluid style={{width:"400px"}}>
+                <Container fluid style={{ width: "400px" }}>
                     <Row>
                         <Col>
 
@@ -86,22 +94,15 @@ const Login = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <p>Forgot Password ?</p>
-
-                            <Link to="/signup"> <p style={{ color: "#6CD4CA" }}><strong>Reset Your Password</strong></p></Link>
-                            <br /> <p>Don't have an account ?</p>
-                            <Link to="/signup"> <p style={{ color: "#6CD4CA" }}><strong>Sign Up Now</strong></p></Link>
+                            <p style={{ color: "grey" }}>Forgot Password ?<br />
+                                <Link to="/changePassword"> <strong>Reset Your Password</strong></Link></p>
+                            <br />
+                            <p style={{ color: "grey" }}>Dont have an account ?<br />
+                                <u><a href="mailto:platformtech44@gmail.com">Contact your Adminstrator</a></u></p>
 
                         </Col>
                     </Row>
                 </Container>
-
-
-
-
-
-
-
 
                 <br /><br /><br /><br /><br /><br /><br /><br />
             </div>

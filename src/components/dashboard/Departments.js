@@ -2,7 +2,7 @@ import './departments.css'
 import { Container, Row, Col } from 'react-grid-system';
 import Technical from '../assets/Technical.jpg';
 import Graphics from '../assets/Graphics.jpg';
-import Management from '../assets/Management.jpg';
+import Management from '../assets/manageme.jpg';
 
 
 const Departments = () => {
@@ -46,8 +46,8 @@ const Departments = () => {
                                 <span className="departmentImg">
                                     <img src={Management} alt="Management" resizeMode='contain'
                                         style={{
-                                            maxHeight: '98%',
-                                            maxWidth: '98%'
+                                            maxHeight: '70%',
+                                            maxWidth: '70%'
                                         }}
                                     />
                                 </span>
