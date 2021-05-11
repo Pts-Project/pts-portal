@@ -38,7 +38,7 @@
     "validator": "^13.5.2",
     "web-vitals": "^0.2.4"
   },
-  "proxy": "http://pussgrc.herokuapp.com",
+  "proxy": "https://pussgrc.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

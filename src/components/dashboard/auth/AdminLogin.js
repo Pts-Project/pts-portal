@@ -19,7 +19,7 @@ const AdminLogin = () => {
             M.toast({ html: "Invalid Email", classes: "#c62828 red darken-3" })
             return
         }
-        fetch("http://pussgrc.herokuapp.com/admin/login", {
+        fetch("https://pussgrc.herokuapp.com/admin/login", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
