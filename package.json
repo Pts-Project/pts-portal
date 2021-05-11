@@ -38,7 +38,7 @@
     "validator": "^13.5.2",
     "web-vitals": "^0.2.4"
   },
-  "proxy": "https://pussgrc.herokuapp.com",
+  "proxy": "https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
