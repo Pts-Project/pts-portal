@@ -31,7 +31,7 @@ function EditProfile() {
   
                 const id=details._id
                 console.log(id)
-                axios.put(`http://localhost:5000/updateProfile/`+id, userdata)
+                axios.put(`https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/updateProfile/`+id, userdata)
                     .then(res => {
                         // M.toast({ html: "Success", classes: "#43a047 green darken-1" })
                         // window.location=('/admin/panel')

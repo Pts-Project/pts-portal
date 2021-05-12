@@ -4,7 +4,7 @@ import Card from './UserCard'
 import './alluser.css'
 function Alluser(){
     const [allUser, setAllUser] = useState([])
-    axios.get("/allUsers")
+    axios.get("https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/allUsers")
         .then(res=>{
             setAllUser(res.data.users)
         })

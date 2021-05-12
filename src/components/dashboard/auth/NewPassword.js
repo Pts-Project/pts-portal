@@ -18,7 +18,7 @@ const NewPassword = () => {
             M.toast({ html: "Passwords do not match", classes: "#c62828 red darken-3" })
             return
         }
-        fetch("/new-password", {
+        fetch("https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/new-password", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"

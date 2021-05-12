@@ -28,7 +28,7 @@ function AddEvent() {
                     name: ImgName,
                     formulr:formurl
                 }
-                axios.post('/event/create', cloudata, {
+                axios.post('https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/event/create', cloudata, {
                     headers: {
                         'Authorization': "Bearer " + localStorage.getItem("jwt")
                     }

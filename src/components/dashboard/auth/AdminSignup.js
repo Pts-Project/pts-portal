@@ -19,7 +19,7 @@ const AdminSignup = () => {
             M.toast({ html: "Passwords do not match", classes: "#c62828 red darken-3" })
             return
         }
-        fetch("/admin/signup", {
+        fetch("/https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/admin/signup", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"

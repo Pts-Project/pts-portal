@@ -29,7 +29,7 @@ function AddUser() {
                     mobile: Mobile,
                     password: Password
                 }
-                axios.post('/user/signup', userdata)
+                axios.post('https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/user/signup', userdata)
                     .then(res => {
                         M.toast({ html: "Sucess", classes: "#43a047 green darken-1" })
                         setEmail("")

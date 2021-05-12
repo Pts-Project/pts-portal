@@ -28,7 +28,7 @@ class Events extends Component {
   fetchImages = async () => {
     //await axios.get('/events')
     axios
-      .get("/events")
+      .get("https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/events")
       .then((res) => {
         //localStorage.setItem("test", "a")
         this.setState({ photos: res.data });

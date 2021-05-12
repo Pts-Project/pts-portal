@@ -5,7 +5,7 @@ import Card from './AllprojectsCard'
 function AllProjects() {
     const details = JSON.parse(localStorage.getItem('user'))
     const [AllProjects, setAllProjects] = useState([])
-    axios.get("/allprojects")
+    axios.get("https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/allprojects")
         .then(res=>{
             setAllProjects(res.data.users)
           

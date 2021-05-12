@@ -3,7 +3,7 @@ import axios from 'axios'
 import Card from '../deleteUser/DeleteCard'
 function DeleteUser() {
     const [allUser, setAllUser] = useState([])
-    axios.get("/allUsers")
+    axios.get("https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/allUsers")
         .then(res=>{
             setAllUser(res.data.users)
         })

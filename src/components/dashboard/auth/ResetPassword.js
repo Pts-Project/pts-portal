@@ -14,7 +14,7 @@ const ResetPassword = () => {
       M.toast({ html: "Invalid Email", classes: "#c62828 red darken-3" })
       return
     }
-    fetch("/changePassword", {
+    fetch("https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/changePassword", {
       method: "post",
       headers: {
         "Content-Type": "application/json"

@@ -18,7 +18,7 @@ const Login = () => {
             M.toast({ html: "Invalid Email", classes: "#c62828 red darken-3" })
             return
         }
-        fetch("/user/login", {
+        fetch("https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/user/login", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
