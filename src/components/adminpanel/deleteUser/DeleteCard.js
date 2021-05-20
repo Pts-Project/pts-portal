@@ -8,9 +8,9 @@ function DeleteCard(props){
  
     const DeleteUser=(e)=>{
  
-        axios.delete(`https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/deleteUser/`+id)
+        axios.delete(`https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/deleteUser/`+id,{ crossdomain: true })
         .then(res=>{
-          alert("Deleted!")
+            alert("Deleted!")
             window.location.reload()
         })
     }
