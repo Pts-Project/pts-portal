@@ -60,11 +60,11 @@ const Admin = () => {
                                                 <i className="material-icons prefix">account_circle</i>
                                         My Profile</Nav.Link>
                                         </Nav.Item>
-                                        <Nav.Item >
+                                        {/* <Nav.Item >
                                             <Nav.Link eventKey="about" >
                                                 <i className="material-icons prefix">settings</i>
-                                        About</Nav.Link>
-                                        </Nav.Item>
+                                        About</Nav.Link> */}
+                                        {/* </Nav.Item> */}
                                         <label>Users</label>
                                         <Nav.Item>
                                             <Nav.Link eventKey="addUser">

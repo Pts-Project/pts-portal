@@ -47,10 +47,10 @@ const Footer = () => {
                     <Row>
                         <Col md={12} align="center">
                             <social class="social" align="center">
-                                <a href="fb.com"> <fab class="fb">Facebook</fab></a>&nbsp;
-                                <a href="fb.com"> <fab class="twt">Twitter</fab></a>&nbsp;
-                                <a href="fb.com"> <fab class="insta">Instagram</fab></a>&nbsp;
-                                <a href="fb.com"> <fab class="lnkd">Linkedin</fab></a>
+                                <a href="https://www.facebook.com/platformTechs/"> <fab class="fb">Facebook</fab></a>&nbsp;
+                                <a href="https://twitter.com/platform_tech"> <fab class="twt">Twitter</fab></a>&nbsp;
+                                <a href="https://www.instagram.com/platformtechs/"> <fab class="insta">Instagram</fab></a>&nbsp;
+                                <a href="https://in.linkedin.com/company/platform-tech-group"> <fab class="lnkd">Linkedin</fab></a>
                             </social>
                         </Col>
                     </Row>

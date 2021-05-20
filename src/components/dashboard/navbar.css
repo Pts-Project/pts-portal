@@ -1,6 +1,7 @@
-.nav-wrapper{
+    .nav-wrapper{
     font-family: 'Bebas Neue', cursive;    
     color:rgb(0, 0, 0);
+    display: block;
 }
 .sidenav{
     font-family: 'Bebas Neue';
@@ -12,6 +13,7 @@
 nav{
     box-shadow: none;    
     text-decoration: none;
+    display: block;
 }
 .sidenav-trigger{
     color:white;
