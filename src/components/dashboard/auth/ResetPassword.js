@@ -66,14 +66,14 @@ const ResetPassword = () => {
               </button>
             </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col>
               <p>Don't have an account?</p>
 
               <Link to="/signup"> <p style={{ color: "#6CD4CA" }}><strong>Sign Up Now</strong></p></Link>
 
             </Col>
-          </Row>
+          </Row> */}
         </Container>
 
         <br /><br /><br /><br /><br /><br /><br /><br />

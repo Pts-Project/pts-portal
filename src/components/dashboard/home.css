@@ -1,96 +1,90 @@
 .main {
-    height: 100%;
-    margin: 0%;
+  height: 100%;
+  margin: 0%;
 }
 
-
-.hcontainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 95vh
+.hcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
 }
 
 #particles-js {
-    /* background-color: black; */
-    background-image: url(../assets/bg_stars.jpg); 
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+  /* background-color: black; */
+  background-image: url(../assets/bg_stars.jpg);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
-
-
-h1{
-    color:white;
-    font-family: "Raleway","sans serif";
-    font-size:56px; 
+h1 {
+  color: white;
+  font-family: "Raleway", "sans serif";
+  font-size: 56px;
 }
-#overlay h2{
-    color:white;
-    font-family: "Caveat";
-    font-size:28px;
-    -webkit-user-select: none;
-     -moz-user-select: -moz-none;
-      -ms-user-select: none;
-          user-select: none;
+#overlay h2 {
+  color: white;
+  font-family: "Caveat";
+  font-size: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-#overlay h1{
-    font-weight: bold;
+#overlay h1 {
+  font-weight: bold;
 }
 
-.about p{
-    color: black;
+.about p {
+  color: black;
 }
 
 #overlay {
+  position: relative;
+  margin-bottom: 100px;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    color: white;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 62px;
+  }
+  h2 {
+    color: white;
+    font-family: "Caveat";
+    font-size: 28px;
+  }
+  #overlay {
     position: relative;
-    margin-bottom: 100px;
-    -webkit-user-select: none;
-     -moz-user-select: -moz-none;
-      -ms-user-select: none;
-          user-select: none;
+    padding: 40px;
+  }
 }
 
-@media(max-width:1024px){
-    h1{
-        color:white;
-        font-family: "Raleway";
-        font-weight: bold;
-        font-size:62px;
-    }
-    h2{
-        color:white;
-        font-family: "Caveat";
-        font-size:28px;
-       
-    }
-    #overlay {
-        position: relative;
-        padding:40px;
-    }
+@media (max-width: 576px) {
+  h1 {
+    color: white;
+    font-family: "Raleway";
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #overlay h2 {
+    color: white;
+    font-family: "Caveat";
+    font-size: 12px;
+  }
+  #overlay {
+    position: relative;
+    padding: 50px;
+  }
 }
-
-@media(max-width:576px){
-    h1{
-        color:white;
-        font-family: "Raleway";
-        font-size:28px;
-        font-weight: bold;
-    }
-    #overlay h2{
-        color:white;
-        font-family: "Caveat";
-        font-size:12px;
-       
-    }
-    #overlay {
-        position: relative;
-        padding:50px;
-    }
-}
-
