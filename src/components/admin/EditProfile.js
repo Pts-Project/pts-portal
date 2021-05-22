@@ -70,7 +70,7 @@ function EditProfile() {
                             onChange={(e) => { setSelImage(e.target.files[0]) }}
                         />
                     </div>
-                    <div className="pass">
+                    {/* <div className="pass">
                         <label>
                             Name
                         </label>
@@ -81,8 +81,8 @@ function EditProfile() {
                             required
                             onChange={(e) => { setName(e.target.value) }}
                         />
-                    </div>
-                    <div className="pass">
+                    </div> */}
+                    {/* <div className="pass">
                         <label>
                             Email
                     </label>
@@ -95,7 +95,7 @@ function EditProfile() {
                             onChange={(e) => { setEmail(e.target.value) }}
                         />
 
-                    </div>
+                    </div> */}
                     <div className="pass">
                         <label>
                             Mobile
