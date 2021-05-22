@@ -11,6 +11,7 @@ function DeleteEventCard(props){
         axios.delete(`https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/deleteEvent/`+id,{ crossdomain: true })
         .then(res=>{
             alert("Deleted!")
+            window.location.reload()
             
         })
     }
