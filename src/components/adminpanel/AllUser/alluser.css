@@ -1,8 +1,8 @@
-.row{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-a{
-    color:white;
+a {
+  color: white;
 }
