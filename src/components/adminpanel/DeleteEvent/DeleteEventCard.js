@@ -20,7 +20,7 @@ function DeleteEventCard(props){
             <div className="card-title"><b>{props.name}</b></div>
             {/* <div className="com">Email: {props.email}</div>
             <div className="com">Mobile: {props.mobile}</div>     */}
-            <button  onClick={DeleteUser}><b>Delete User</b></button>   
+            <button  onClick={DeleteUser}><b>Delete Event</b></button>   
         </div>
     )
 }

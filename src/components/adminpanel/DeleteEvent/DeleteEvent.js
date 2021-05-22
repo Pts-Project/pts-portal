@@ -45,6 +45,7 @@ function DeleteEvent() {
                         
                                     <Card  
                                         name={event.name} 
+                                        _id={event._id} 
                                         // email={user.email}
                                         // mobile={user.mobile}
                                         // _id={user._id}
