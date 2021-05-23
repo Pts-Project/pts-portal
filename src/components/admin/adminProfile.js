@@ -8,6 +8,7 @@ import AddUser from '../adminpanel/addUser/AddUser'
 import AddEvent from '../adminpanel/AddEvent';
 import DeleteUser from '../adminpanel/deleteUser/DeleteUser'
 import Alluser from '../adminpanel/AllUser/Alluser'
+import DeleteEvent from '../adminpanel/DeleteEvent/DeleteEvent'
 const Admin = () => {
     console.log(localStorage.getItem('user'));
 
@@ -170,6 +171,9 @@ const Admin = () => {
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="allUser">
                                             <Alluser />
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="deleteEvents">
+                                            <DeleteEvent/>
                                         </Tab.Pane>
                                     </Tab.Content>
                                 </Col>

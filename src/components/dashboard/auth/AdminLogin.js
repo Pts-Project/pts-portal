@@ -13,7 +13,7 @@ const AdminLogin = () => {
     const history = useHistory()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
- 
+
     const PostData = () => {
         if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
             M.toast({ html: "Invalid Email", classes: "#c62828 red darken-3" })
@@ -52,7 +52,7 @@ const AdminLogin = () => {
     if (localStorage.getItem("admincheck") === "no") {
         return (
             <div className="mycard">
-                <div className="card auth-card " style={{ backgroundImage: `url(${sin})`, minWidth: "100%", minHeight: "100%", backgroundPosition: "centre", backgroundSize: "cover" }}>
+                <div className="auth-card " style={{ backgroundImage: `url(${sin})`, minWidth: "100%", minHeight: "100%", backgroundPosition: "centre", backgroundSize: "cover" }}>
 
                     <Row>
                         <Col>

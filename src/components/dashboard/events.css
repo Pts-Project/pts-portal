@@ -1,18 +1,26 @@
 .events {
-  background: #f8f1f1;
-  padding: 0% 10% 0% 10%;
+  background: rgba(15, 12, 12, 0.9);
+  
+  padding: 0% 8% 0% 8%;
   margin-bottom: 0px;
+   /* background-image: url(../assets/bg_stars.jpg); */
+
+}
+
+.eventContent{
+  box-shadow: 500px ,100px, rgb(219, 14, 14);
 }
 
 .rowTitle {
   text-decoration: underline;
   text-decoration-color: grey;
-  color: black;
+  color: rgb(253, 253, 253);
 }
 
 .carousel {
   width: auto;
   height: auto;
+  
   /* border: 1px solid black; */
 }
 
@@ -24,6 +32,7 @@
 .carousel .slide img {
   max-height: 400px; /* change this to whatever you want */
   object-fit: contain;
+ align-content: center;
   width: auto;
 }
 
@@ -31,4 +40,7 @@
   color: black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.holds-the-iframe {
+  background:url(../assets/logo2.png) center center no-repeat;
 }

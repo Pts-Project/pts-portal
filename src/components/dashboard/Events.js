@@ -1,23 +1,27 @@
 import "./events.css";
 import React, { Component, useState } from "react";
-import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { Button, Modal } from "react-bootstrap";
 import noevents from "../assets/noevents.gif";
-
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 class Events extends Component {
   constructor(props) {
     super(props);
+    this.onclick = this
+      .onclick
+      .bind(this);
     this.state = {
       dataisLoaded: false,
       photos: [],
       images: [],
       formurl: "",
     };
+
+    //this.registerevent = this.registerevent.bind(this);
   }
 
   componentDidMount() {
@@ -39,7 +43,7 @@ class Events extends Component {
         this.setState({
           images,
           dataisLoaded: true,
-        });
+        })
       })
       .catch(() => {
         console.log("no data");
@@ -52,14 +56,39 @@ class Events extends Component {
             __v: 0,
           },
         ];
+
         this.setState({
           images,
           dataisLoaded: true,
         });
-      });
-  };
-  handleChange = (photoformurl) => this.setState({ formurl: photoformurl });
+      }).then((images) => {
+        console.log(this.state.images.length)
+        if (this.state.images.length < 1) {
+          images = [
+            {
+              indexnumber: "1",
+              _id: "0000",
+              name: "No Event Sheduled",
+              image: noevents,
+              __v: 0,
+            },
+          ];
 
+          this.setState({
+            images,
+            dataisLoaded: true,
+          })
+        }
+      })
+
+  };
+
+
+  onclick(photo_id, photoname) {
+
+    cookies.set('event', photo_id, { path: '/' });
+    window.location.assign('/event/' + photoname);
+  }
   render() {
     return (
       <div className="events">
@@ -77,7 +106,10 @@ class Events extends Component {
               <br></br>
               <br></br>
             </Row>
+            {cookies.set('eventlist', JSON.stringify(this.state.images), { path: '/' })}
+            {console.log('cookie', cookies.get('eventlist'))}
             <Carousel className="carousel">
+
               {this.state.images.map((photo, _id) => (
                 <div key={_id}>
                   <img
@@ -86,10 +118,13 @@ class Events extends Component {
                     fluid
                     alt={photo.name}
                   />
-                  <h3 className="legend">
-                    <button variant="primary">
+                  <h3 className="legend" style={{ background: "rgba(255,255,255,0)", }}>
+                    <button
+
+                      style={{ width: "25%", textTransform: "uppercase", fontWeight: "bolder" }}
+                      onClick={(e) => this.onclick(photo._id, photo.name)}>
+
                       {photo.name}
-                      <Link to={`/event/${photo.formurl}`}>Registerhere</Link>
                     </button>
                   </h3>
                 </div>
@@ -97,7 +132,7 @@ class Events extends Component {
             </Carousel>
           </Container>
         </div>
-      </div>
+      </div >
     );
   }
 }

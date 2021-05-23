@@ -19,24 +19,24 @@ function AddEvent() {
         formdata.append("folder", "events")
         axios.post('https://api.cloudinary.com/v1_1/djxi7xjop/image/upload', formdata)
             .then(res => {
-                console.log(res.data)
-                console.log(res.data.secure_url)
+            
                 const url = res.data.secure_url
                 console.log(ImgName)
                 const cloudata = {
                     image: url,
                     name: ImgName,
-                    formulr:formurl
+                    formurl:formurl
                 }
-                axios.post('https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/event/create', cloudata, {
-                    headers: {
-                        'Authorization': "Bearer " + localStorage.getItem("jwt")
-                    }
-                }).then(data => {
+                axios.post('https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/addevent', cloudata)
+                .then(data => {
 
-                    console.log(data)
+                    console.log("fddfdfd",data)
                     M.toast({ html: "Sucess", classes: "#43a047 green darken-1" })
-                    // window.location=('/admin/panel')
+                    setSelImage("")
+                    setImgName("")
+                    setFormurl("")
+                    window.location.reload()
+                   
                 }).catch(err => {
                     console.log(err)
                 })

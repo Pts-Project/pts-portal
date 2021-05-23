@@ -1,20 +1,17 @@
-.achiveContent p{
+.achiveContent p {
+  color: #c6fef1 !important;
+  font-family: "Raleway", "sans serif" !important;
+}
+
+.achive {
+  background-image: url(../assets/bg_stars.jpg);
+  min-height: 30vh;
+  padding: 2%;
+}
+
+@media (max-width: 476px) {
+  .achiveContent p {
     color: #c6fef1 !important;
-    font-family: 'Raleway',"sans serif" !important;
+    font-family: "Raleway", "sans serif" !important;
+  }
 }
-
-.achive{
-    background-image: url(../assets/bg_stars.jpg);
-    min-height: 30vh;
-    padding: 2%;   
-}
-
-@media(max-width:476px){
-
-   .achiveContent p{
-    color: #c6fef1 !important;
-    font-family: 'Raleway',"sans serif" !important;
-}
-}
-
-

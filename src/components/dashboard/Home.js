@@ -134,7 +134,7 @@ class Home extends Component {
                     <div id="overlay">
                         <h1 className="title">PLATFORM TECH SOLUTION</h1>
                         <p>
-                            <h2>"Your Imagination, Our Creation"</h2>
+                            <h2>"Build Your CV, Build Your Career</h2>
                         </p>
                     </div>
                 </div>
