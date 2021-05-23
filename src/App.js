@@ -24,6 +24,7 @@ import Allusers from "./components/adminpanel/AllUser/Alluser";
 import AddProject from "./components/AddProject/AddProject";
 import AllProjects from "./components/AddProject/AllProjects";
 import Eventreg from "./components/dashboard/eventreg";
+import DeleteEvent from "./components/adminpanel/DeleteEvent/DeleteEvent";
 class App extends Component {
   render() {
     return (
@@ -57,6 +58,7 @@ class App extends Component {
               <Route exact path="/users/alluser" component={AddUser}></Route>
               <Route exact path="/addevent" component={AddEvent}></Route>
               <Route exact path="/deleteuser" component={DeleteUser}></Route>
+              <Route exact path="/deleteevent" component={DeleteEvent}></Route>
               <Route
                 exact
                 path="/user/addproject"

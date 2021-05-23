@@ -1,33 +1,31 @@
-.aboutContent p{
-    color: black;
-    font-family: 'Raleway',"sans serif";
-    /* padding: 1%; */
+.aboutContent p {
+  color: black;
+  font-family: "Raleway", "sans serif";
+  /* padding: 1%; */
 }
 
-.rowTitle{
-    text-decoration: underline;
+.rowTitle {
+  text-decoration: underline;
   text-decoration-color: grey;
 }
 
-.about{
-    background-color: white;
-    /* background-image: url(../assets/aboutBG.jpg); */
-    min-height: 90vh;
-    padding: 4%;
-    padding-top: 2%;
-    padding-bottom: 1%;
-    
+.about {
+  background-color: white;
+  /* background-image: url(../assets/aboutBG.jpg); */
+  min-height: 90vh;
+  padding: 4%;
+  padding-top: 2%;
+  padding-bottom: 1%;
 }
 
 .aboutPara {
-    text-align: justify;
-    font-family: 'Raleway','sans serif';
-    font-size: 20px;
-    margin-left: 5%;
+  text-align: justify;
+  font-family: "Raleway", "sans serif";
+  font-size: 20px;
+  margin-left: 5%;
 }
 
-.aboutImg{
-    padding:1%;
-    margin-right: 20%;
+.aboutImg {
+  padding: 1%;
+  margin-right: 20%;
 }
-

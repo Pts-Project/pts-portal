@@ -1,29 +1,27 @@
 .card {
-    
-    color: #fff;
-    padding: 20px;
-    height: max-content;
-    
-    border-radius: 4px;
-    margin:10px;
-    font-size:20px;
-    width:20rem;  
-    font-family: 'Oswald', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 20px;
+  height: max-content;
+  /* border: 1px solid #000; */
+  border-radius: 4px;
+  margin: 10px;
+  font-size: 20px;
+  width: 20rem;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button{
-    padding: 8px;
-    background-color:white;
-    width: max-content;
-    border: 1px solid black;
-    border-radius: 4px;
-    color: black;
-
+button {
+  padding: 8px;
+  background-color: white;
+  width: max-content;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
 }
-.anchor{
-    color:white;
+.anchor {
+  color: white;
 }

@@ -52,7 +52,7 @@ const AdminLogin = () => {
     if (localStorage.getItem("admincheck") === "no") {
         return (
             <div className="mycard">
-                <div className="card auth-card " style={{ backgroundImage: `url(${sin})`, minWidth: "100%", minHeight: "100%", backgroundPosition: "centre", backgroundSize: "cover" }}>
+                <div className="auth-card " style={{ backgroundImage: `url(${sin})`, minWidth: "100%", minHeight: "100%", backgroundPosition: "centre", backgroundSize: "cover" }}>
 
                     <Row>
                         <Col>
