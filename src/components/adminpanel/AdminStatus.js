@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Dev() {
+export default function Gods() {
     return (
         <div>
             <h2>THE GODS AND CREATORS</h2>

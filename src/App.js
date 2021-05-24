@@ -22,10 +22,11 @@ import EditProfile from "./components/admin/EditProfile";
 import DeleteUser from "./components/adminpanel/deleteUser/DeleteUser";
 import Allusers from "./components/adminpanel/AllUser/Alluser";
 import AddProject from "./components/AddProject/AddProject";
+import AdminStatus from "./components/adminpanel/AdminStatus";
 import AllProjects from "./components/AddProject/AllProjects";
 import Eventreg from "./components/dashboard/eventreg";
 import DeleteEvent from "./components/adminpanel/DeleteEvent/DeleteEvent";
-import Gods from "./components/adminpanel/Dev";
+
 class App extends Component {
   render() {
     return (
@@ -37,6 +38,7 @@ class App extends Component {
               <Route exact path="/" component={Home}></Route>
               <Route exact path="/user/profile" component={User}></Route>
               <Route exact path="/admin/panel" component={Panel}></Route>
+      
               <Route exact path="/events" component={Events}></Route>
               <Route path={["/event/:id"]} component={Eventreg} />
               <Route exact path="/eventreg" component={Eventreg}></Route>
@@ -59,8 +61,9 @@ class App extends Component {
               <Route exact path="/users/alluser" component={AddUser}></Route>
               <Route exact path="/addevent" component={AddEvent}></Route>
               <Route exact path="/deleteuser" component={DeleteUser}></Route>
+              <Route exact path="/gods" component={AdminStatus}></Route>
               <Route exact path="/deleteevent" component={DeleteEvent}></Route>
-              <Route exact path="/gods" component={Gods}></Route>
+            
               <Route
                 exact
                 path="/user/addproject"
