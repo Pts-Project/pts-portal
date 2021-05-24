@@ -1,0 +1,3 @@
+netlify
+mongoose
+plat git push

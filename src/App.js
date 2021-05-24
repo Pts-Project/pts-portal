@@ -25,6 +25,7 @@ import AddProject from "./components/AddProject/AddProject";
 import AllProjects from "./components/AddProject/AllProjects";
 import Eventreg from "./components/dashboard/eventreg";
 import DeleteEvent from "./components/adminpanel/DeleteEvent/DeleteEvent";
+import Gods from "./components/adminpanel/Dev";
 class App extends Component {
   render() {
     return (
@@ -59,6 +60,7 @@ class App extends Component {
               <Route exact path="/addevent" component={AddEvent}></Route>
               <Route exact path="/deleteuser" component={DeleteUser}></Route>
               <Route exact path="/deleteevent" component={DeleteEvent}></Route>
+              <Route exact path="/gods" component={Gods}></Route>
               <Route
                 exact
                 path="/user/addproject"
