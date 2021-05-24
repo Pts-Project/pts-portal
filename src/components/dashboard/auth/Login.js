@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import M from 'materialize-css'
 import sin from '../../assets/sin.jpg'
 import { Container, Row, Col } from 'react-grid-system'
@@ -9,7 +9,7 @@ import './auth.css'
 //mongodb+srv://Platform:<password>@cluster0.lsibt.mongodb.net/<dbname>?retryWrites=true&w=majority
 
 const Login = () => {
-    const history = useHistory()
+ 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 

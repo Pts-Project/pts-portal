@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, {  useState } from 'react'
 import '../AddEvent.css'
 import axios from 'axios'
 import M from 'materialize-css'

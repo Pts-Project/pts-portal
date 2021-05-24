@@ -7,9 +7,7 @@ function DeleteEvent() {
         .then(res=>{
             setAllEvents(res.data.list)
         })
-        const names=[]
-        const emails=[]
-        const roles=[]
+  
         // allEvents.map(data=>{
         //     names.push(data.name)
       

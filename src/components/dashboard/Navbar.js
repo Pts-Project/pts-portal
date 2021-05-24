@@ -1,7 +1,7 @@
 import { Component } from "react"
 import React from 'react'
 import { Link } from "react-router-dom";
-import { Icon, SideNav } from 'react-materialize';
+import { Icon } from 'react-materialize';
 import './navbar.css'
 import Logo from '../assets/ptslogo.png'
 import SignedInLinks from './signlinks/signedinlinks'

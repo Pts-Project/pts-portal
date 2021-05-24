@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import {  useHistory } from 'react-router-dom'
 import M from 'materialize-css'
 import reset from '../../assets/reset1.jpeg'
 import { Container, Row, Col } from 'react-grid-system'

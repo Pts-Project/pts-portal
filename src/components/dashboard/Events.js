@@ -1,6 +1,6 @@
 import "./events.css";
-import React, { Component, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import Button from '@material-ui/core/Button';
 import { Container, Row, Col } from "react-grid-system";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -119,13 +119,13 @@ class Events extends Component {
                     alt={photo.name}
                   />
                   <h3 className="legend" style={{ background: "rgba(255,255,255,0)", }}>
-                    <button
+                  <Button variant="contained" color="primary"
 
                       style={{ width: "25%", textTransform: "uppercase", fontWeight: "bolder" }}
                       onClick={(e) => this.onclick(photo._id, photo.name)}>
 
                       Register Now
-                    </button>
+                    </Button>
                   </h3>
                 </div>
               ))}

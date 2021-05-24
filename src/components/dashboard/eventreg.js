@@ -2,7 +2,7 @@ import { React, useEffect, useState } from "react";
 import "./events.css";
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
-let url = window.location.pathname;
+// let url = window.location.pathname;
 // { console.log('cookie', cookies.get('eventlist')) }
 // console.log('cookie', cookies.get('event'))
 let eventlist = cookies.get('eventlist');

@@ -1,11 +1,11 @@
-import React, { Component, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, {  useState } from 'react'
+
 import M from 'materialize-css'
 import './AddEvent.css'
 import axios from 'axios'
 
 function AddEvent() {
-    const history = useHistory()
+ 
     const [SelImage, setSelImage] = useState("");
     const [ImgName, setImgName] = useState("");
     

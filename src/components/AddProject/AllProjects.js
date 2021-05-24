@@ -15,7 +15,7 @@ function AllProjects() {
     .then((res) => {
       setAllProjects(res.data.users);
       
-        AllProjects.map((mail) => {
+        AllProjects.forEach((mail) => {
           if (details.email === mail.email) {
             newmail.push(mail);
           }

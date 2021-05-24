@@ -7,7 +7,7 @@ import './auth.css'
 
 const NewPassword = () => {
     const history = useHistory()
-    const [isError, setIsError] = useState("")
+    // const [isError, setIsError] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const { token } = useParams()

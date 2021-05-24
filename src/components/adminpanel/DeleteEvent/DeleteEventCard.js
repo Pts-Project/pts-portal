@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React from 'react'
-import { useAlert } from 'react-alert'
+
 function DeleteEventCard(props){
 
     
