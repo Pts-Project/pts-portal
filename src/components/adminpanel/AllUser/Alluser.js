@@ -18,10 +18,7 @@ function Alluser(){
         //     roles.push(data.role)
         // })
 
-        // const index = names.indexOf("Admin");
-        // if (index > -1) {
-        // names.splice(index, 1);
-        // }
+ 
       
     return(
         <div> 
@@ -44,9 +41,7 @@ function Alluser(){
                                     email={user.email}
                                     mobile={user.mobile}
                                     _id={user._id}
-                                    // officelocation={user.}
-                                    // company={job.company}
-                                    // publisher={job.publisher}
+                                   
                                 />
                     
                     
