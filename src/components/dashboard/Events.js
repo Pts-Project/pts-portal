@@ -124,7 +124,7 @@ class Events extends Component {
                       style={{ width: "25%", textTransform: "uppercase", fontWeight: "bolder" }}
                       onClick={(e) => this.onclick(photo._id, photo.name)}>
 
-                      {photo.name}
+                      Register Now
                     </button>
                   </h3>
                 </div>
