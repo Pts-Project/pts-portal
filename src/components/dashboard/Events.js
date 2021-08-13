@@ -1,20 +1,19 @@
 import "./events.css";
 import React, { Component } from "react";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import { Container, Row, Col } from "react-grid-system";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import noevents from "../assets/noevents.gif";
-import Cookies from 'universal-cookie';
+import Cookies from "universal-cookie";
 const cookies = new Cookies();
 class Events extends Component {
   constructor(props) {
     super(props);
-    this.onclick = this
-      .onclick
-      .bind(this);
+    this.onclick = this.onclick.bind(this);
     this.state = {
+      eventexist: true,
       dataisLoaded: false,
       photos: [],
       images: [],
@@ -32,7 +31,9 @@ class Events extends Component {
   fetchImages = async () => {
     //await axios.get('/events')
     axios
-      .get("https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/events")
+      .get(
+        "https://peaceful-temple-16111.herokuapp.com/https://pussgrc.herokuapp.com/events"
+      )
       .then((res) => {
         //localStorage.setItem("test", "a")
         this.setState({ photos: res.data });
@@ -43,7 +44,7 @@ class Events extends Component {
         this.setState({
           images,
           dataisLoaded: true,
-        })
+        });
       })
       .catch(() => {
         console.log("no data");
@@ -61,9 +62,11 @@ class Events extends Component {
           images,
           dataisLoaded: true,
         });
-      }).then((images) => {
-        console.log(this.state.images.length)
+      })
+      .then((images) => {
+        console.log(this.state.images.length);
         if (this.state.images.length < 1) {
+          this.setState({ eventexist: false });
           images = [
             {
               indexnumber: "1",
@@ -77,17 +80,14 @@ class Events extends Component {
           this.setState({
             images,
             dataisLoaded: true,
-          })
+          });
         }
-      })
-
+      });
   };
 
-
   onclick(photo_id, photoname) {
-
-    cookies.set('event', photo_id, { path: '/' });
-    window.location.assign('/event/' + photoname);
+    cookies.set("event", photo_id, { path: "/" });
+    window.location.assign("/event/" + photoname);
   }
   render() {
     return (
@@ -106,10 +106,11 @@ class Events extends Component {
               <br></br>
               <br></br>
             </Row>
-            {cookies.set('eventlist', JSON.stringify(this.state.images), { path: '/' })}
-            {console.log('cookie', cookies.get('eventlist'))}
+            {cookies.set("eventlist", JSON.stringify(this.state.images), {
+              path: "/",
+            })}
+            {console.log("cookie", cookies.get("eventlist"))}
             <Carousel className="carousel">
-
               {this.state.images.map((photo, _id) => (
                 <div key={_id}>
                   <img
@@ -118,13 +119,26 @@ class Events extends Component {
                     fluid
                     alt={photo.name}
                   />
-                  <h3 className="legend" style={{ background: "rgba(255,255,255,0)", }}>
-                  <Button variant="contained" color="primary"
-
-                      style={{ width: "25%", textTransform: "uppercase", fontWeight: "bolder" }}
-                      onClick={(e) => this.onclick(photo._id, photo.name)}>
-
-                      Register Now
+                  <h3
+                    className="legend"
+                    style={{ background: "rgba(255,255,255,0)" }}
+                  >
+                    <Button
+                      disabled={!this.state.eventexist}
+                      variant="contained"
+                      color="primary"
+                      style={{
+                        width: "25%",
+                        textTransform: "uppercase",
+                        fontWeight: "bolder",
+                      }}
+                      onClick={(e) => this.onclick(photo._id, photo.name)}
+                    >
+                      {this.state.eventexist ? (
+                        <div>Register Now</div>
+                      ) : (
+                        <div>No Events</div>
+                      )}
                     </Button>
                   </h3>
                 </div>
@@ -132,7 +146,7 @@ class Events extends Component {
             </Carousel>
           </Container>
         </div>
-      </div >
+      </div>
     );
   }
 }
